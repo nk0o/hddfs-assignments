@@ -9,18 +9,20 @@
   <meta name="title" content="현대면세점">
   <meta name="description" content="여행자 Only. 지금 현대면세점에서 앞선 감각과 다채로운 면세 쇼핑의 즐거움을 느껴보세요!">
   <meta name="keywords" content="현대면세점">
+
   <!---------- og 태그 채우기 ---------->
   <meta property="og:type" content="website">
   <meta property="og:title" content="현대면세점">
-  <meta property="og:description" content="사이트를 간단히 소개하는 설명">
+  <meta property="og:description" content="여행자 Only. 지금 현대면세점에서 앞선 감각과 다채로운 면세 쇼핑의 즐거움을 느껴보세요!">
   <meta property="og:url" content="https://www.hddfs.com/">
   <meta property="og:image" content="https://example.com/thumbnail.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="사이트 제목">
-  <meta name="twitter:description" content="간단 설명">
+  <meta name="twitter:title" content="현대면세점">
+  <meta name="twitter:description" content="여행자 Only. 지금 현대면세점에서 앞선 감각과 다채로운 면세 쇼핑의 즐거움을 느껴보세요!">
   <meta name="twitter:image" content="https://example.com/thumbnail.jpg">
   <!---------- og 태그 채우기 ---------->
+
   <title>현대면세점</title>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <link rel="icon" type="image/png" href="favicon.ico">
@@ -32,57 +34,93 @@
     <header></header>
     <nav></nav>
     <main id="container">
-      <!-- 이벤트 상단 -->
-      <section class="event-top">
-        <div class="event-top__period">기간</div>
-        <h2 class="event-top__tit">이벤트 타이틀</h2>
-        <div class="event-top__subtit">보조 타이틀</div>
-        <div class="event-top__img">
-          <img src="../resour ces/images/@sample_event_top.png" alt="">
-        </div>
-      </section>
-      <!-- 콘텐츠단 -->
-      <section class="event-content">
-        <!-- evnet1: 브랜드 그룹 -->
-        <article class="event-content__box">
-          <div class="badge" style="background-color: #98E5E8;">Event <span>1</span></div>
-          <h3 class="event-content__tit">이벤트 제목</h3>
-          <p class="event-content__desc">이벤트 내용이 들어가는 영역입니다.<br>이벤트 내용이 들어가는 영역입니다.</p>
-          <div class="brand-list"></div>
-        </article>
-        <!-- evnet2: 기본상품 그룹 -->
-        <article class="event-content__box">
-          <div class="badge" style="background-color: #98E5E8;">Event <span>1</span></div>
-          <h3 class="event-content__tit">이벤트 제목</h3>
-          <p class="event-content__desc">이벤트 내용이 들어가는 영역입니다.<br>이벤트 내용이 들어가는 영역입니다.</p>
-          <div class="product-list"></div>
-        </article>
-        <!-- evnet3: 세트상품 그룹 -->
-        <article class="event-content__box">
-          <div class="badge" style="background-color: #98E5E8;">Event <span>1</span></div>
-          <h3 class="event-content__tit">이벤트 제목</h3>
-          <p class="event-content__desc">이벤트 내용이 들어가는 영역입니다.<br>이벤트 내용이 들어가는 영역입니다.</p>
-          <div class="set-list"></div>
-        </article>
-      </section>
-      <!-- 이벤트 하단 -->
-      <section class="event-bottom">
-        <div class="brand-list"></div>
-        <div class="notice">
-          <h4 class="notice__tit">유의사항</h4>
-          <ul class="notice__list">
-            <li class="notice__item">한 ID당 1일 1회 증정됩니다.</li>
-            <li class="notice__item">사은품은 중복 증정이 되지 않습니다.</li>
-            <li class="notice__item">사은품은 디자인 및 구성이 임의로 증정되며, 선택할 수 없습니다.</li>
-            <li class="notice__item text-danger">사은품의 재고 소진 이후에도 해당 페이지와 관련 배너는 보여질 수 있습니다.</li>
+      <div class="event-template">
+        <!-- 페이지 현재위치 -->
+        <nav aria-label="현재위치">
+          <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="#">홈</a></li>
+            <li class="breadcrumb__item"><a href="#">기획전</a></li>
+            <li class="breadcrumb__item"><a href="#">사은행사</a></li>
+            <li class="breadcrumb__item"><a href="#">라네즈 외 7개 할인 기획전</a></li>
           </ul>
-        </div>
-        <div class="event-bottom__link">더 많은 기획전 행사가 궁금하다면</div>
-      </section>
-      <!-- 추천상품 -->
-      <section class="product-recommend"></section>
-      <!-- 그룹상품 -->
-      <section class="product-group"></section>
+        </nav>
+        <!-- S: 이벤트 상단 -->
+        <section class="event-top">
+          <div class="event-top__back" style="background-color: #C9E1FD;"></div><!-- BO지정 -->
+          <div class="event-top__inner" style="color:#1b1e23;"><!-- BO 배경색에따라 #ffffff/#1b1e23 -->
+            <div class="event-top__period">2024.07.29 - 재고소진시까지</div>
+            <h2 class="event-top__tit">라네즈 외 7개 브랜드<br>햇살 가림 상품 기획전</h2>
+            <div class="event-top__subtit">전 구매고객 대상 7개 브랜드 상품 할인!</div>
+          </div>
+          <div class="event-top__img">
+            <img src="/resources/images/event/img-laneige-banner.webp" alt>
+          </div>
+        </section>
+        <!-- E: 이벤트 상단 -->
+        <!-- S: 콘텐츠단 -->
+        <section class="event-content">
+          <!-- evnet1: 브랜드 그룹 -->
+          <article class="event-content__box">
+            <div class="badge" style="background-color: #5898D8">Event <span>1</span></div>
+            <h3 class="event-content__tit">라네즈 외 7개 브랜드<br>40% 할인</h3>
+            <p class="event-content__subtit">7개 브랜드의 SUN 제품을 40% 할인가에 만나보세요!</p>
+            <div class="event-content__cont brand-list"></div>
+          </article>
+          <!-- evnet2: 기본상품 그룹 -->
+          <article class="event-content__box">
+            <div class="badge" style="background-color: #5898D8;">Event <span>2</span></div>
+            <h3 class="event-content__tit">햇살 가리는 SUN 제품<br>70% 할인</h3>
+            <p class="event-content__subtit">7개 브랜드의 SUN 제품을 70% 할인가에 만나보세요!</p>
+            <div class="event-content__cont product-list"></div>
+          </article>
+          <!-- evnet3: 세트상품 그룹 -->
+          <article class="event-content__box">
+            <div class="badge" style="background-color: #5898D8;">Event <span>1</span></div>
+            <h3 class="event-content__tit">해를 가려라, SUN 제품<br>세트상품 10% 할인</h3>
+            <p class="event-content__subtit">라네즈 래디언씨 선크림 SPF50+/PA++++ 50ml + 네어 에센셜 블러링 피니시 파우더(싱글)</p>
+            <div class="event-content__cont set-list"></div>
+          </article>
+        </section>
+        <!-- E: 콘텐츠단 -->
+        <!-- S: 이벤트 하단 -->
+        <section class="event-bottom">
+          <div class="event-bottom__inner">
+            <div class="brand-list">
+              <a href="#" class="brand-card">
+                <div class="brand-card__img">
+                  <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
+                  <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
+                </div>
+                <div class="brand-card__tit">오쏘몰</div>
+              </a>
+              <a href="#" class="brand-card">
+                <div class="brand-card__img">
+                  <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-laneige.jpg" alt>
+                  <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                </div>
+                <div class="brand-card__tit">라네즈</div>
+              </a>
+            </div>
+            <div class="notice">
+              <h4 class="notice__tit">유의사항</h4>
+              <ul class="notice__list"><!-- BO 텍스트 입력 -->
+                <li class="notice__item">한 ID당 1일 1회 증정됩니다.</li>
+                <li class="notice__item">사은품은 중복 증정이 되지 않습니다.</li>
+                <li class="notice__item">사은품은 디자인 및 구성이 임의로 증정되며, 선택할 수 없습니다.</li>
+                <li class="notice__item text-danger">사은품의 재고 소진 이후에도 해당 페이지와 관련 배너는 보여질 수 있습니다.</li>
+              </ul>
+            </div>
+            <div class="event-bottom__link">더 많은 기획전 행사가 궁금하다면</div>
+          </div>
+        </section>
+        <!-- E: 이벤트 하단 -->
+        <!-- S: 추천상품 -->
+        <section class="product-recommend"></section>
+        <!-- E: 추천상품 -->
+        <!-- S: 그룹상품 -->
+        <section class="product-group"></section>
+        <!-- E: 그룹상품 -->
+      </div>
     </main>
     <footer>
       <ul class="footer__link">
