@@ -24,8 +24,9 @@
   <!---------- og 태그 채우기 ---------->
 
   <title>현대면세점</title>
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/resources/js/jquery-3.7.1.min.js"></script>
   <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="resources/css/swiper-bundle.css">
   <link rel="stylesheet" href="resources/css/style.css">
 </head>
 
@@ -57,25 +58,111 @@
           </div>
         </section>
         <!-- E: 이벤트 상단 -->
+        <div class="tab_menu line_tab">
+          <ul>
+            <li class="current tab_list" data-tab="tab1-1" role="tab" tabindex="0"><button>행사</button></li>
+            <li class="tab_list" data-tab="tab1-2" role="tab" tabindex="1"><button>추천상품</button></li>
+            <li class="tab_list" data-tab="tab1-3" role="tab" tabindex="2"><button>전체상품</button></li>
+          </ul>
+          <div class="tab_bar"></div>
+        </div><!-- //.tab_menu -->
         <!-- S: 콘텐츠단 -->
         <section class="event-content">
           <!-- evnet1: 브랜드 그룹 -->
           <article class="event-content__box">
-            <div class="badge" style="background-color: #5898D8">Event <span>1</span></div>
+            <div class="badge" style="background-color: #5799D6;">Event <span>1</span></div>
             <h3 class="event-content__tit">라네즈 외 7개 브랜드<br>40% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 40% 할인가에 만나보세요!</p>
-            <div class="event-content__cont brand-list"></div>
+            <div class="event-content__cont">
+              <div class="brand-list swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png"
+                          alt="오쏘몰 로고">
+                      </div>
+                      <div class="brand-card__tit">오쏘몰</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-laneige.jpg" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                          alt="라네즈 로고">
+                      </div>
+                      <div class="brand-card__tit">라네즈</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-centrum.jpg" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                          alt="라네즈 로고">
+                      </div>
+                      <div class="brand-card__tit">센트룸</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-onnuri.jpg" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                          alt="라네즈 로고">
+                      </div>
+                      <div class="brand-card__tit">온누리스토어</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                          alt="라네즈 로고">
+                      </div>
+                      <div class="brand-card__tit">헤어메스</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                          alt="라네즈 로고">
+                      </div>
+                      <div class="brand-card__tit">헤어메스</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-lacto.jpg" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                          alt="라네즈 로고">
+                      </div>
+                      <div class="brand-card__tit">종근당건강</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
           </article>
           <!-- evnet2: 기본상품 그룹 -->
           <article class="event-content__box">
-            <div class="badge" style="background-color: #5898D8;">Event <span>2</span></div>
+            <div class="badge" style="background-color: #5799D6;;">Event <span>2</span></div>
             <h3 class="event-content__tit">햇살 가리는 SUN 제품<br>70% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 70% 할인가에 만나보세요!</p>
             <div class="event-content__cont product-list"></div>
           </article>
           <!-- evnet3: 세트상품 그룹 -->
           <article class="event-content__box">
-            <div class="badge" style="background-color: #5898D8;">Event <span>1</span></div>
+            <div class="badge" style="background-color: #5799D6;;">Event <span>1</span></div>
             <h3 class="event-content__tit">해를 가려라, SUN 제품<br>세트상품 10% 할인</h3>
             <p class="event-content__subtit">라네즈 래디언씨 선크림 SPF50+/PA++++ 50ml + 네어 에센셜 블러링 피니시 파우더(싱글)</p>
             <div class="event-content__cont set-list"></div>
@@ -86,20 +173,69 @@
         <section class="event-bottom">
           <div class="event-bottom__inner">
             <div class="brand-list">
-              <a href="#" class="brand-card">
-                <div class="brand-card__img">
-                  <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
-                  <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
-                </div>
-                <div class="brand-card__tit">오쏘몰</div>
-              </a>
-              <a href="#" class="brand-card">
-                <div class="brand-card__img">
-                  <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-laneige.jpg" alt>
-                  <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
-                </div>
-                <div class="brand-card__tit">라네즈</div>
-              </a>
+              <div class="brand-card">
+                <a href="#">
+                  <div class="brand-card__img">
+                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-laneige.jpg" alt>
+                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                  </div>
+                  <div class="brand-card__tit">라네즈</div>
+                </a>
+              </div>
+              <div class="brand-card">
+                <a href="#">
+                  <div class="brand-card__img">
+                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
+                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
+                  </div>
+                  <div class="brand-card__tit">오쏘몰</div>
+                </a>
+              </div>
+              <div class="brand-card">
+                <a href="#">
+                  <div class="brand-card__img">
+                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-centrum.jpg" alt>
+                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                  </div>
+                  <div class="brand-card__tit">센트룸</div>
+                </a>
+              </div>
+              <div class="brand-card">
+                <a href="#">
+                  <div class="brand-card__img">
+                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-onnuri.jpg" alt>
+                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                  </div>
+                  <div class="brand-card__tit">온누리스토어</div>
+                </a>
+              </div>
+              <div class="brand-card">
+                <a href="#">
+                  <div class="brand-card__img">
+                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
+                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                  </div>
+                  <div class="brand-card__tit">헤어메스</div>
+                </a>
+              </div>
+              <div class="brand-card">
+                <a href="#">
+                  <div class="brand-card__img">
+                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
+                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                  </div>
+                  <div class="brand-card__tit">헤어메스</div>
+                </a>
+              </div>
+              <div class="brand-card">
+                <a href="#">
+                  <div class="brand-card__img">
+                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-lacto.jpg" alt>
+                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                  </div>
+                  <div class="brand-card__tit">종근당건강</div>
+                </a>
+              </div>
             </div>
             <div class="notice">
               <h4 class="notice__tit">유의사항</h4>
@@ -181,8 +317,23 @@
       </div>
     </footer>
   </div>
-
+  <script src="resources/js/jquery-3.7.1.min.js"></script>
+  <script src="resources/js/swiper-bundle.min.js"></script>
   <script src="resources/js/common.js"></script>
+  <script>
+    var brandSwiper = new Swiper('.brand-list', {
+      slidesPerView: 6,
+      spaceBetween: 24,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 
 </html>
