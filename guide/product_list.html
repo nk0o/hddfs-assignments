@@ -6,164 +6,115 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Product List | Guide</title>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="../resources/css/swiper-bundle.css">
   <link rel="stylesheet" href="../resources/css/style.css">
 </head>
 
 <body>
   <!-- 상품 리스트 -->
-  <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
-    <div class="prd_list_lg">
-      <div class="prd__card">
-        <div class="prd">
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_list_lg_15.png" alt="">
-            <span class="badge bg_primary">묶음</span>
-          </div><!-- //.img -->
-          <div class="info">
-            <strong class="tit">아미노 매직세팅폼</strong>
-            <span class="detail">매직세팅 열펌제 (1제+2제)</span>
-            <span class="amount">400ml(1제) / 500ml(2제)</span>
-            <div class="price"><em>12,000</em><span>원</span></div>
-          </div><!-- //.info -->
-        </div><!-- //.prd -->
-        <div class="bottom">
-          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-        </div><!-- //.bottom -->
-      </div><!-- //.prd__card -->
-    </div><!-- //.prd_list_lg -->
-  </div><!-- //.prd_list_wrap -->
-  <!-- //상품 리스트 -->
-
-  <div class="box_wrap">
-    <div class="component_guideline">
-      <section class="sec_product is_noBack">
-        <div class="prd_list_wrap swiper swiper-container">
-          <div class="prd_list_lg swiper-wrapper">
-            <div class="prd__card swiper-slide">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                  <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략
-                    상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                  <span class="amount">용량 g, ml</span>
-                  <div class="price"><em>27,500</em><span>원</span></div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-              </div>
+  <section class="prd-wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+    <div class="prd-list prd-list__col-3">
+      <div class="prd-card">
+        <a href="#">
+          <div class="prd-card__img">
+            <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+            <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+          </div>
+          <div class="prd-card__info">
+            <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+            <div class="prd-card__price">
+              <div class="prd-card__price-percent">70%</div>
+              <div class="prd-card__price-sale">$11.7</div>
+              <div class="prd-card__price-original">$39</div>
             </div>
-            <div class="prd__card swiper-slide">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                  <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략
-                    상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                  <span class="amount">용량 g, ml</span>
-                  <div class="price"><em>27,500</em><span>원</span></div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-              </div>
+          </div>
+        </a>
+      </div><!-- //.prd-card -->
+      <div class="prd-card">
+        <a href="">
+          <div class="prd-card__img">
+            <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+            <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+          </div>
+          <div class="prd-card__info">
+            <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+            <div class="prd-card__price">
+              <div class="prd-card__price-percent">70%</div>
+              <div class="prd-card__price-sale">$11.7</div>
+              <div class="prd-card__price-original">$39</div>
             </div>
-            <div class="prd__card swiper-slide">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                  <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략
-                    상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                  <span class="amount">용량 g, ml</span>
-                  <div class="price"><em>27,500</em><span>원</span></div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-              </div>
+          </div>
+        </a>
+      </div><!-- //.prd-card -->
+      <div class="prd-card">
+        <a href="">
+          <div class="prd-card__img">
+            <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+            <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+          </div>
+          <div class="prd-card__info">
+            <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+            <div class="prd-card__price">
+              <div class="prd-card__price-percent">70%</div>
+              <div class="prd-card__price-sale">$11.7</div>
+              <div class="prd-card__price-original">$39</div>
             </div>
-            <div class="prd__card swiper-slide">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                  <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략
-                    상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                  <span class="amount">용량 g, ml</span>
-                  <div class="price"><em>27,500</em><span>원</span></div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-              </div>
-            </div>
-            <div class="prd__card swiper-slide">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                  <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략
-                    상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                  <span class="amount">용량 g, ml</span>
-                  <div class="price"><em>27,500</em><span>원</span></div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-              </div>
-            </div>
-            <div class="prd__card swiper-slide">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                  <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략
-                    상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                  <span class="amount">용량 g, ml</span>
-                  <div class="price"><em>27,500</em><span>원</span></div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-              </div>
-            </div>
-            <div class="prd_more prd__card swiper-slide">
-              <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
-            </div><!-- //.prd__card -->
-          </div><!-- //.swiper-wrapper -->
-          <div class="swiper-pagination"></div>
-        </div><!-- //.swiper-container -->
-      </section><!-- //.sec_product.is_noBack -->
+          </div>
+        </a>
+      </div><!-- //.prd-card -->
     </div>
+  </section>
+
+
+  <div class="set-card">
+    <div class="swiper-set_img set-card__img">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지"></div>
+        <div class="swiper-slide"><img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지"></div>
+      </div>
+      <div class="swiper-pagination swiper-pagination--dot"></div>
+    </div>
+    <div class="set-card__info">
+      <div class="set-card__com">
+        <div class="set-card__txt">상품구성</div>
+        <div class="set-card__thumbnail">
+          <img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
+          <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+        </div>
+      </div>
+      <div class="set-card__price">
+        <div class="set-card__price-box">
+          <div>
+            <span>할인적용가</span>
+            <span class="set-card__price-original">$39</span>
+          </div>
+          <div>
+            <span class="set-card__price-percent">70%</span>
+            <span class="set-card__price-sale">$11.7</span>
+          </div>
+        </div>
+        <button class="set-card__cart">담기</button>
+      </div>
+    </div><!-- //.set-card__info -->
   </div>
+
+
+  <script src="../resources/js/jquery-3.7.1.min.js"></script>
+  <script src="../resources/js/swiper-bundle.min.js"></script>
   <script src="../resources/js/common.js"></script>
+  <script>
+    var setCardImgSwiper = new Swiper('.swiper-set_img ', {
+      slidesPerView: 1,
+      grabCursor: true,
+      thumbs: {
+        swiper: setCardThumbSwiper,
+      },
+      pagination: {
+        el: ".swiper-set_img  .swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 
 </html>

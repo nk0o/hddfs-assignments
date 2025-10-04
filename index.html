@@ -26,6 +26,7 @@
   <title>현대면세점</title>
   <script src="/resources/js/jquery-3.7.1.min.js"></script>
   <link rel="icon" type="image/png" href="favicon.ico">
+
   <link rel="stylesheet" href="resources/css/swiper-bundle.css">
   <link rel="stylesheet" href="resources/css/style.css">
 </head>
@@ -58,14 +59,18 @@
           </div>
         </section>
         <!-- E: 이벤트 상단 -->
-        <div class="tab_menu line_tab">
-          <ul>
-            <li class="current tab_list" data-tab="tab1-1" role="tab" tabindex="0"><button>행사</button></li>
-            <li class="tab_list" data-tab="tab1-2" role="tab" tabindex="1"><button>추천상품</button></li>
-            <li class="tab_list" data-tab="tab1-3" role="tab" tabindex="2"><button>전체상품</button></li>
-          </ul>
-          <div class="tab_bar"></div>
-        </div><!-- //.tab_menu -->
+        <!-- S: 이벤트 탭메뉴 -->
+        <div class="event-tab">
+          <div class="tab_menu line_tab">
+            <ul>
+              <li class="current tab_list" data-tab="tab1-1" role="tab" tabindex="0"><button>행사</button></li>
+              <li class="tab_list" data-tab="tab1-2" role="tab" tabindex="1"><button>추천상품</button></li>
+              <li class="tab_list" data-tab="tab1-3" role="tab" tabindex="2"><button>전체상품</button></li>
+            </ul>
+            <div class="tab_bar"></div>
+          </div><!-- //.tab_menu -->
+        </div>
+        <!-- E: 이벤트 탭메뉴 -->
         <!-- S: 콘텐츠단 -->
         <section class="event-content">
           <!-- evnet1: 브랜드 그룹 -->
@@ -74,7 +79,7 @@
             <h3 class="event-content__tit">라네즈 외 7개 브랜드<br>40% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 40% 할인가에 만나보세요!</p>
             <div class="event-content__cont">
-              <div class="brand-list swiper-container">
+              <div class="swiper-brand">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide brand-card">
                     <a href="#">
@@ -129,21 +134,21 @@
                   <div class="swiper-slide brand-card">
                     <a href="#">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
-                          alt="라네즈 로고">
-                      </div>
-                      <div class="brand-card__tit">헤어메스</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide brand-card">
-                    <a href="#">
-                      <div class="brand-card__img">
                         <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-lacto.jpg" alt>
                         <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
                           alt="라네즈 로고">
                       </div>
                       <div class="brand-card__tit">종근당건강</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-card">
+                    <a href="#">
+                      <div class="brand-card__img">
+                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
+                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png"
+                          alt="오쏘몰 로고">
+                      </div>
+                      <div class="brand-card__tit">오쏘몰</div>
                     </a>
                   </div>
                 </div>
@@ -158,14 +163,252 @@
             <div class="badge" style="background-color: #5799D6;;">Event <span>2</span></div>
             <h3 class="event-content__tit">햇살 가리는 SUN 제품<br>70% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 70% 할인가에 만나보세요!</p>
-            <div class="event-content__cont product-list"></div>
+            <div class="event-content__cont">
+              <div class="swiper-sale_prd prd-wrap">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide prd-list prd-list__col-3">
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-03.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-04.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-05.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-06.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                  </div><!-- //.swiper-slide -->
+                  <div class="swiper-slide prd-list prd-list__col-3">
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-03.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-04.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-05.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                    <div class="prd-card">
+                      <a href="#">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-06.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                  </div><!-- //.swiper-slide -->
+                </div>
+                <div class="swiper-pagination"></div>
+              </div><!-- //.swiper-sale_prd -->
+            </div>
           </article>
           <!-- evnet3: 세트상품 그룹 -->
           <article class="event-content__box">
             <div class="badge" style="background-color: #5799D6;;">Event <span>1</span></div>
             <h3 class="event-content__tit">해를 가려라, SUN 제품<br>세트상품 10% 할인</h3>
             <p class="event-content__subtit">라네즈 래디언씨 선크림 SPF50+/PA++++ 50ml + 네어 에센셜 블러링 피니시 파우더(싱글)</p>
-            <div class="event-content__cont set-list"></div>
+            <div class="event-content__cont">
+              <div class="set-card">
+                <div class="swiper-set_img set-card__img">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
+                    </div>
+                    <div class="swiper-slide"><img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination swiper-pagination--dot"></div>
+                </div>
+                <div class="set-card__info">
+                  <div class="set-card__com">
+                    <div class="set-card__txt">상품구성</div>
+                    <div class="set-card__thumbnail">
+                      <button type="button"><img src="../../resources/images/product/img-prd-07.webp"
+                          alt="상품명_이미지"></button>
+                      <button type="button"><img src="../../resources/images/product/img-prd-01.webp"
+                          alt="상품명_이미지"></button>
+                    </div>
+                  </div>
+                  <div class="set-card__price">
+                    <div class="set-card__price-box">
+                      <div>
+                        <span>할인적용가</span>
+                        <span class="set-card__price-original">$39</span>
+                      </div>
+                      <div>
+                        <span class="set-card__price-percent">70%</span>
+                        <span class="set-card__price-sale">$11.7</span>
+                      </div>
+                    </div>
+                    <button class="set-card__cart">담기</button>
+                  </div>
+                </div><!-- //.set-card__info -->
+              </div><!-- //.set-card -->
+            </div>
           </article>
         </section>
         <!-- E: 콘텐츠단 -->
@@ -258,61 +501,157 @@
         <!-- E: 그룹상품 -->
       </div>
     </main>
-    <footer>
-      <ul class="footer__link">
-        <li><a href="https://www.hddfs.com/store/kr/dm/main.do">현대면세점 소개</a></li>
-        <li><a href="https://www.hddfs.com/shop/om/consmStoPtnsQust/stoPtnsQustHome.do">입점/제휴</a></li>
-        <li><a href="https://www.hddfs.com/shop/om/consmCont/selectMbshJoinTcnd.do?mbshJoinTcndCd=001">이용약관</a>
-        </li>
-        <li>
-          <a href="https://www.hddfs.com/shop/om/consmCont/selectMbshJoinTcnd.do?mbshJoinTcndCd=008">
-            <strong>개인정보처리방침</strong>
-          </a>
-        </li>
-        <li><a href="https://www.hddfs.com/shop/om/consmCont/selectMbshJoinTcnd.do?mbshJoinTcndCd=005">영상정보처리기기
-            운영 / 관리방침</a></li>
-        <li><a href="#">이메일무단수집거부</a></li>
-      </ul>
-      <div class="footer__family">
-        <div class="select__box">
-          <div class="select__box_value"><span>Family Sites</span></div>
-          <div class="select__box_list list-group">
-            <ul>
-              <li class="list-group_opt">
-                <div class="list_tit">쇼핑몰 사이트</div>
+    <footer class="footer">
+      <div class="footer-menu">
+        <div class="footer__inner">
+          <ul class="footer-link">
+            <li><a href="#">현대면세점 소개</a></li>
+            <li><a href="#">입점/제휴</a></li>
+            <li><a href="#">이용약관</a>
+            </li>
+            <li>
+              <a href="#">
+                <strong>개인정보처리방침</strong>
+              </a>
+            </li>
+            <li><a href="#">영상정보처리기기
+                운영 / 관리방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+          </ul>
+          <div class="footer-family">
+            <div class="dropdown">
+              <div class="dropdown__value"><span>Family Sites</span></div>
+              <div class="dropdown__list dropdown__list-group">
                 <ul>
-                  <li><a href="http://www.hyundaihmall.com/" target="_blank">현대Hmall</a></li>
-                  <li><a href="http://www.thehyundai.com/" target="_blank">더현대닷컴</a></li>
-                  <li><a href="http://www.thehandsome.com/" target="_blank">더한섬</a></li>
-                  <li><a href="http://mall.hyundailivart.co.kr/" target="_blank">현대리바트몰</a></li>
-                  <li><a href="http://www.hfashionmall.com/" target="_blank">H패션몰</a></li>
-                </ul>
-              </li>
-              <li class="list-group_opt">
-                <div class="list_tit">관계사 사이트</div>
-                <ul>
-                  <li><a href="http://www.ehyundai.com/newPortal/ir/main.do" target="_blank">현대백화점그룹</a></li>
-                  <li><a href="https://www.ehyundai.com/newPortal/index.do" target="_blank">현대백화점</a>
+                  <li class="dropdown__list-group_opt">
+                    <div class="list_tit">쇼핑몰 사이트</div>
+                    <ul>
+                      <li><a href="#" target="_blank">현대Hmall</a></li>
+                      <li><a href="#" target="_blank">더현대닷컴</a></li>
+                      <li><a href="#" target="_blank">더한섬</a></li>
+                      <li><a href="#" target="_blank">현대리바트몰</a></li>
+                      <li><a href="#" target="_blank">H패션몰</a></li>
+                    </ul>
                   </li>
-                  <li><a href="https://www.hyundaihmall.com/" target="_blank">현대홈쇼핑</a></li>
-                  <li><a href="https://hyundaigreenfood.com/" target="_blank">현대그린푸드</a></li>
-                  <li><a href="http://www.hyundaicatering.co.kr/" target="_blank">현대캐터링시스템</a></li>
-                  <li><a href="http://www.cnsfoodsystem.co.kr/" target="_blank">C&amp;S푸드시스템</a></li>
-                  <li><a href="https://www.handsome.co.kr/ko/main.do" target="_blank">한섬</a></li>
-                  <li><a href="https://www.hyundailivart.co.kr/" target="_blank">현대리바트</a></li>
-                  <li><a href="http://www.hyundailnc.com/" target="_blank">현대L&amp;C</a></li>
-                  <li><a href="http://home.hyundaidreamtour.com/" target="_blank">현대드림투어</a></li>
-                  <li><a href="https://www.hyundaifuturenet.com/" target="_blank">현대퓨처넷</a></li>
-                  <li><a href="http://www.everdigm.com/" target="_blank">에버다임</a></li>
-                  <li><a href="http://www.hyundaibioland.co.kr/" target="_blank">현대바이오랜드</a></li>
-                  <li><a href="https://www.ezwel.com/" target="_blank">현대이지웰</a></li>
-                  <li><a href="https://sikdae.com" target="_blank">벤디스(식권대장)</a></li>
-                  <li><a href="http://www.ehyundai.com/newPortal/sc/main/main.do" target="_blank">현대백화점그룹
-                      사회복지재단</a></li>
+                  <li class="dropdown__list-group_opt">
+                    <div class="list_tit">관계사 사이트</div>
+                    <ul>
+                      <li><a href="#" target="_blank">현대백화점그룹</a></li>
+                      <li><a href="#" target="_blank">현대백화점</a>
+                      </li>
+                      <li><a href="#" target="_blank">현대홈쇼핑</a></li>
+                      <li><a href="#" target="_blank">현대그린푸드</a></li>
+                      <li><a href="#" target="_blank">현대캐터링시스템</a></li>
+                      <li><a href="#" target="_blank">C&amp;S푸드시스템</a></li>
+                      <li><a href="#" target="_blank">한섬</a></li>
+                      <li><a href="#" target="_blank">현대리바트</a></li>
+                      <li><a href="#" target="_blank">현대L&amp;C</a></li>
+                      <li><a href="#" target="_blank">현대드림투어</a></li>
+                      <li><a href="#" target="_blank">현대퓨처넷</a></li>
+                      <li><a href="#" target="_blank">에버다임</a></li>
+                      <li><a href="#" target="_blank">현대바이오랜드</a></li>
+                      <li><a href="#" target="_blank">현대이지웰</a></li>
+                      <li><a href="#" target="_blank">벤디스(식권대장)</a></li>
+                      <li><a href="#" target="_blank">현대백화점그룹
+                          사회복지재단</a></li>
+                    </ul>
+                  </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="footer__inner">
+          <div class="footer-info__company">
+            <div class="logo">
+              <a href="#"><img src="/resources/images/logo_footer.png" alt="HYUNDAI - DUTY FREE"></a>
+              <strong>㈜현대디에프</strong>
+            </div>
+            <ul>
+              <li>
+                <span>대표이사 : 박장서</span>
+                <span>서울특별시 강남구 영동대로82길 19</span>
+                <span>사업자등록번호 : 850-88-00325</span>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="footer-info__btn">사업자정보확인</a>
+                <a href="#" class="footer-info__btn">판매자별 사업자 정보</a>
+              </li>
+              <li>
+                <span>통신판매업신고 : 2018-서울강남-02228</span>
+                <span>개인정보보호책임자 : 반형철</span>
+                <span>호스팅사업자 : (주)현대디에프</span>
+              </li>
+              <li>
+                <span>대표번호 : 1811-6688</span>
+                <span>대표메일 : hddfs_official@hddfs.com</span>
               </li>
             </ul>
+            <p class="copyright">COPYRIGHT © HYUNDAI DF Co,. Ltd. ALL RIGHTS RESERVED.</p>
           </div>
+          <div class="footer-info__escrow">
+            <div class="footer-sns">
+              <a href="#" target="_blank" class="footer-sns__item footer-sns__item--facebook">facebook</a>
+              <a href="#" target="_blank" class="footer-sns__item footer-sns__item--instagram">instagram</a>
+            </div>
+            <strong>주식회사 케이에스넷 구매안전(에스크로) 서비스 가맹점</strong>
+            <span>
+              안전한 전자상거래를 위해 ㈜ 케이에스넷의 구매안전(에스크로) 서비스에<br>가입하여, 구매안전(에스크로) 서비스를 제공하고 있습니다.
+            </span>
+            <p>주식회사 케이에스넷 금융감독원 결제대금예치업</p>
+            <p>등록번호 : 02-006-00002</p>
+            <a href="#" class="footer-info__btn">가입확인하기</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-prize">
+        <div class="footer__inner">
+          <ul class="footer-prize__list">
+            <li class="footer-prize__item ismsp">
+              <a href="#" target="_blank">
+                인증범위 : 현대면세점 면세점 서비스 운영<br>
+                유효기간 : 2022.11.27~2025.11.26
+              </a>
+            </li>
+            <li class="footer-prize__item eprivacy">
+              <a href="#" target="_blank">
+                개인정보보호 우수 웹사이트<br>
+                인증/유효기간 : 2024.12.01~2027.11.30
+              </a>
+            </li>
+            <li class="footer-prize__item cbpr">
+              <a href="#" target="_blank">
+                CBPR<br>
+                유효기간 : 2024.09.02 ~ 2025.09.01
+              </a>
+            </li>
+            <li class="footer-prize__item iso_27001">
+              <span>
+                ISO 27001<br>
+                유효기간 : 2023.10.03 ~ 2026.10.02
+              </span>
+            </li>
+            <li class="footer-prize__item iso_27701">
+              <span>
+                ISO 27701<br>
+                유효기간 : 2024.07.26 ~ 2026.10.02
+              </span>
+            </li>
+            <li class="footer-prize__item award">
+              <a href="#" target="_blank">
+                스마트앱어워드 2021<br>
+                디자인 이노베이션 대상
+              </a>
+            </li>
+            <li class="footer-prize__item ccm">
+              <a href="#" target="_blank">
+                소비자중심경영 기업 인증<br>
+                유효기간: 2024.01.01~2026.12.31
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
@@ -321,16 +660,72 @@
   <script src="resources/js/swiper-bundle.min.js"></script>
   <script src="resources/js/common.js"></script>
   <script>
-    var brandSwiper = new Swiper('.brand-list', {
+    var ww = $(window).width();
+    var brandSwiper = undefined;
+    function initBrnadSwiper() {
+      if (ww >= 1080 && brandSwiper == undefined) {
+        brandSwiper = new Swiper('.swiper-brand', {
+          slidesPerGroup: 6,
+          slidesPerView: 6,
+          spaceBetween: 24,
+          loop: false,
+          speed: 1500,
+          grabCursor: true,
+          pagination: {
+            el: ".swiper-brand .swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-brand .swiper-button-next",
+            prevEl: ".swiper-brand .swiper-button-prev",
+          },
+        });
+      } else if (ww < 1080 && brandSwiper != undefined) {
+        brandSwiper.destroy();
+        brandSwiper = undefined;
+      }
+    }
+    initBrnadSwiper();
+    $(window).on('resize', function () {
+      ww = $(window).width();
+      initBrnadSwiper();
+    });
+    /* var brandSwiper = new Swiper('.swiper-brand', {
+      slidesPerGroup: 6,
       slidesPerView: 6,
       spaceBetween: 24,
+      loop: false,
+      speed: 1500,
+      grabCursor: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-brand .swiper-pagination",
         clickable: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-brand .swiper-button-next",
+        prevEl: ".swiper-brand .swiper-button-prev",
+      },
+    }); */
+    var salePrdSwiper = new Swiper('.swiper-sale_prd', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: false,
+      speed: 1500,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-sale_prd .swiper-pagination",
+        clickable: true,
+      },
+    });
+    var setCardImgSwiper = new Swiper('.swiper-set_img ', {
+      slidesPerView: 1,
+      grabCursor: true,
+      thumbs: {
+        swiper: setCardThumbSwiper,
+      },
+      pagination: {
+        el: ".swiper-set_img  .swiper-pagination",
+        clickable: true,
       },
     });
   </script>

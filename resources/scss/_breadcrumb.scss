@@ -1,0 +1,27 @@
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__item {
+    position: relative;
+    font-size: 1.4rem;
+    line-height: 1.2142;
+    text-decoration: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background: url("../images/icon/ico-chev-next-24-400.svg") center/contain no-repeat;
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+
