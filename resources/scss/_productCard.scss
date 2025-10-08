@@ -2,12 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px 24px;
+  @media screen and (max-width: 1079px) {
+    gap: 32px 10px;
+  }
   .prd-card {
     flex: 1 1 calc(25% - 24px);
   }
   &__col-3 {
     .prd-card {
       flex: 1 1 calc(33.333% - 24px);
+      @media screen and (max-width: 1079px) {
+        flex: 1 1 calc(33.333% - 10px)
+      }
     }
   }
 }
@@ -157,7 +163,7 @@
   }
   &__info {
     padding: 0 24px;
-    border-radius: 16px;
+    border-radius:0 0 16px 16px;
     border: 1px solid var(--color-border);
     border-top: none;
   }

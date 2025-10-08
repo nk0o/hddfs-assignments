@@ -7,6 +7,7 @@
 .brand-card {
 	display: block;
 	width: 160px;
+	min-width: 160px;
 	&__img {
 		position: relative;
 		width: 160px;

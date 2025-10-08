@@ -34,7 +34,7 @@
 <body>
   <div class="wrap">
     <header class="header">
-      <div class="header__inner">
+      <div class="sec__inner">
         <div class="header__top">
           <div class="header__language">
             <button class="header__language-btn">한국어</button>
@@ -71,28 +71,45 @@
         </div>
       </div>
     </header>
-
+    <header class="mo-header">
+      <button type="button" class="mo-header__btn mo-header__btn-back">
+        <img src="/resources/images/icon/ico-header-back.svg" alt="뒤로가기 버튼">
+      </button>
+      <h2 class="mo-header__tit">사은행사</h2>
+      <div class="mo-header__btns">
+        <button type="button" class="mo-header__btn mo-header__btn-search">
+          <img src="/resources/images/icon/ico-gnb-search.svg" alt="검색 버튼">
+        </button>
+        <a href="#" class="mo-header__btn mo-header__btn-cart">
+          <span class="hide">장바구니</span>
+        </a>
+      </div>
+    </header>
     <main id="container">
       <div class="event-template">
         <!-- 페이지 현재위치 -->
         <nav aria-label="현재위치">
-          <ul class="breadcrumb">
-            <li class="breadcrumb__item"><a href="#">홈</a></li>
-            <li class="breadcrumb__item"><a href="#">기획전</a></li>
-            <li class="breadcrumb__item"><a href="#">사은행사</a></li>
-            <li class="breadcrumb__item"><a href="#">라네즈 외 7개 할인 기획전</a></li>
-          </ul>
+          <div class="sec__inner">
+            <ul class="breadcrumb">
+              <li class="breadcrumb__item"><a href="#">홈</a></li>
+              <li class="breadcrumb__item"><a href="#">기획전</a></li>
+              <li class="breadcrumb__item"><a href="#">사은행사</a></li>
+              <li class="breadcrumb__item"><a href="#">라네즈 외 7개 할인 기획전</a></li>
+            </ul>
+          </div>
         </nav>
         <!-- S: 이벤트 상단 -->
         <section class="event-top">
           <div class="event-top__back" style="background-color: #C9E1FD;"></div><!-- BO지정 -->
-          <div class="event-top__inner" style="color:#1b1e23;"><!-- BO 배경색에따라 #ffffff/#1b1e23 -->
-            <div class="event-top__period">2024.07.29 - 재고소진시까지</div>
-            <h2 class="event-top__tit">라네즈 외 7개 브랜드<br>햇살 가림 상품 기획전</h2>
-            <div class="event-top__subtit">전 구매고객 대상 7개 브랜드 상품 할인!</div>
-          </div>
-          <div class="event-top__img">
-            <img src="/resources/images/event/img-laneige-banner.webp" alt>
+          <div class="event-top__box">
+            <div class="event-top__text" style="color:#1b1e23;"><!-- BO 배경색에따라 #ffffff/#1b1e23 -->
+              <div class="event-top__period">2024.07.29 - 재고소진시까지</div>
+              <h2 class="event-top__tit">라네즈 외 7개 브랜드<br>햇살 가림 상품 기획전</h2>
+              <div class="event-top__subtit">전 구매고객 대상 7개 브랜드 상품 할인!</div>
+            </div>
+            <div class="event-top__img">
+              <img src="/resources/images/event/img-laneige-banner.webp" alt>
+            </div>
           </div>
         </section>
         <!-- E: 이벤트 상단 -->
@@ -115,8 +132,8 @@
             <div class="badge" style="background-color: #5799D6;">Event <span>1</span></div>
             <h3 class="event-content__tit">라네즈 외 7개 브랜드<br>40% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 40% 할인가에 만나보세요!</p>
-            <div class="event-content__cont">
-              <div class="swiper-brand">
+            <div class="event-content__cont event-content__cont--brand">
+              <div class="ui-swiper swiper-brand">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide brand-card">
                     <a href="#">
@@ -201,7 +218,7 @@
             <h3 class="event-content__tit">햇살 가리는 SUN 제품<br>70% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 70% 할인가에 만나보세요!</p>
             <div class="event-content__cont">
-              <div class="swiper-sale_prd prd-wrap">
+              <div class="ui-swiper swiper-sale_prd prd-wrap">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide prd-list prd-list__col-3">
                     <div class="prd-card">
@@ -411,7 +428,7 @@
             <p class="event-content__subtit">라네즈 래디언씨 선크림 SPF50+/PA++++ 50ml + 네어 에센셜 블러링 피니시 파우더(싱글)</p>
             <div class="event-content__cont">
               <div class="set-card">
-                <div class="swiper-set_img set-card__img">
+                <div class="ui-swiper swiper-set_img set-card__img">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
                     </div>
@@ -543,19 +560,20 @@
         <div class="footer__inner">
           <ul class="footer__link-list">
             <li><a href="#">현대면세점 소개</a></li>
+            <li><a href="#">지점안내</a></li>
             <li><a href="#">입점/제휴</a></li>
             <li><a href="#">이용약관</a>
             </li>
-            <li>
+            <li class="mo-hide">
               <a href="#">
                 <strong>개인정보처리방침</strong>
               </a>
             </li>
-            <li><a href="#">영상정보처리기기
+            <li class="mo-hide"><a href="#">영상정보처리기기
                 운영 / 관리방침</a></li>
-            <li><a href="#">이메일무단수집거부</a></li>
+            <li class="mo-hide"><a href="#">이메일무단수집거부</a></li>
           </ul>
-          <div class="footer__family">
+          <div class="footer__family mo-hide">
             <div class="dropdown">
               <div class="dropdown__value"><span>Family Sites</span></div>
               <div class="dropdown__list dropdown__list-group">
@@ -602,9 +620,10 @@
       <div class="footer__info">
         <div class="footer__inner">
           <div class="footer__info__company">
-            <div class="logo">
+            <div class="footer__logo">
               <a href="#"><img src="/resources/images/logo-footer.png" alt="HYUNDAI - DUTY FREE"></a>
               <strong>㈜현대디에프</strong>
+              <button type="button" class="footer__logo-btn"></button>
             </div>
             <ul>
               <li>
@@ -626,7 +645,6 @@
                 <span>대표메일 : hddfs_official@hddfs.com</span>
               </li>
             </ul>
-            <p class="copyright">COPYRIGHT © HYUNDAI DF Co,. Ltd. ALL RIGHTS RESERVED.</p>
           </div>
           <div class="footer__info-escrow">
             <div class="footer__sns">
@@ -641,6 +659,7 @@
             <p>등록번호 : 02-006-00002</p>
             <a href="#" class="footer__info__btn">가입확인하기</a>
           </div>
+          <p class="footer__copyright">COPYRIGHT © HYUNDAI DF Co,. Ltd. ALL RIGHTS RESERVED.</p>
         </div>
       </div>
       <div class="footer__prize">
@@ -664,7 +683,7 @@
                 유효기간 : 2024.09.02 ~ 2025.09.01
               </a>
             </li>
-            <li class="footer__prize-item iso_27001">
+            <li class=" footer__prize-item iso_27001">
               <span>
                 ISO 27001<br>
                 유효기간 : 2023.10.03 ~ 2026.10.02
@@ -699,15 +718,21 @@
   <script>
     var ww = $(window).width();
     var brandSwiper = undefined;
+    let resizeTimer;
     function initBrnadSwiper() {
       if (ww >= 1080 && brandSwiper == undefined) {
         brandSwiper = new Swiper('.swiper-brand', {
-          slidesPerGroup: 6,
-          slidesPerView: 6,
+          slidesPerGroup: 5,
+          slidesPerView: 5,
           spaceBetween: 24,
           loop: false,
           speed: 1500,
-          grabCursor: true,
+          breakpoints: {
+            1220: {
+              slidesPerView: 6,
+              slidesPerGroup: 6
+            },
+          },
           pagination: {
             el: ".swiper-brand .swiper-pagination",
             clickable: true,
@@ -724,25 +749,12 @@
     }
     initBrnadSwiper();
     $(window).on('resize', function () {
-      ww = $(window).width();
-      initBrnadSwiper();
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        ww = $(window).width();
+        initBrnadSwiper();
+      }, 200);
     });
-    /* var brandSwiper = new Swiper('.swiper-brand', {
-      slidesPerGroup: 6,
-      slidesPerView: 6,
-      spaceBetween: 24,
-      loop: false,
-      speed: 1500,
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-brand .swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-brand .swiper-button-next",
-        prevEl: ".swiper-brand .swiper-button-prev",
-      },
-    }); */
     var salePrdSwiper = new Swiper('.swiper-sale_prd', {
       slidesPerView: 1,
       spaceBetween: 24,
@@ -756,14 +768,14 @@
     });
     var setCardImgSwiper = new Swiper('.swiper-set_img ', {
       slidesPerView: 1,
-      grabCursor: true,
-      thumbs: {
-        swiper: setCardThumbSwiper,
-      },
       pagination: {
         el: ".swiper-set_img  .swiper-pagination",
         clickable: true,
       },
+    });
+    //footer mobile dropdown
+    $('.footer__logo-btn').on('click', function () {
+      $('.footer__info__company').find('ul').slideToggle();
     });
   </script>
 </body>
