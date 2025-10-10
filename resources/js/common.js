@@ -1,7 +1,7 @@
 /****** Select Box ******/
 $(document).on('click', '.dropdown__value', function (e) {
+  e.preventDefault();
   const t = $(this);
-  console.log(t);
   if ($(this).parents('.dropdown').hasClass('on')) {
     dropDownClose(t);
   } else {
@@ -13,7 +13,7 @@ $(document).on('click', '.dropdown__value', function (e) {
   }
 });
 
-$('.dropdown__list li').click(function (e) {
+$(document).on('click', '.dropdown__list li', function (e) {
   selectBoxDownAction(this);
   SelectBoxChange(this);
 });
@@ -51,16 +51,16 @@ function dropDownClose() {
 function SelectBoxChange(selectItem) {
   if ($(selectItem).find('ul').length <= 0) {
     var $cloneEle = $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').children();
-    var selectText = $(selectItem).html();//250117 수정
+    var selectText = $(selectItem).html();
     clearInput(selectItem);
-    $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').html(selectText);//250117 수정
+    $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').html(selectText);
     $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').append($cloneEle);
     $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').css('color', '#222222');
   }
 };
 
 function clearInput(obj) {
-  $(obj).parents('.dropdown').find('.dropdown__value').children('span').children().empty();//250117 수정
+  $(obj).parents('.dropdown').find('.dropdown__value').children('span').children().empty();
   $(obj).parents('.dropdown').find('.dropdown__value').children('span').empty();
 };
 
@@ -70,8 +70,7 @@ function clearInput(obj) {
 
 
 
-
-
+/**** Tab UI ****/
 
 function LineTabMenuInit() {
   var tabM = $('.tab_menu');
@@ -90,8 +89,6 @@ function LineTabMenuInit() {
     });
   })
 };
-
-
 
 $(document).on('click', '.tab_menu .tab_list', function () { tabMenu(this) });
 
@@ -123,9 +120,8 @@ $(window).on('load resize', function () {
   LineTabMenuInit()
 });
 
-
-if ($('.prd-wrap.ir').length > 0) {
-  $(document).on('click', '.prd-card', function (e) {
+/**** 장바구니 담기 ****/
+  $('.prd-wrap.ir').on('click', '.prd-card', function (e) {
     e.preventDefault();
     let imgSrc = $(this).find('img').attr('src');
     let $parent = $(this).parent();
@@ -146,5 +142,49 @@ if ($('.prd-wrap.ir').length > 0) {
     let count = $('.prd-wrap').find('.prd-card.checked').length;
     $('.prd_cart_btn .count').text(count);
   });
-  // putCart();
-}
+
+/**** Modal UI ****/
+  $(document).on('click', '.btn_modal__open', function(e){
+    e.preventDefault(); 
+    let $target = $(e.target).hasClass('btn_modal__open')? e.target : $(e.target).closest('.btn_modal__open');
+    openModal($target);
+  }); 
+  $(document).on('click', '.modal__btn-close', function(e){
+    e.preventDefault();
+    closeModal(e.target);
+  });
+  let timer = null;
+  $(window).on('resize', function(){//resize modal
+    clearTimeout(timer);
+    timer = setTimeout(modalPosition, 50);
+  })
+  function openModal(el){
+    const modalName = $(el).attr('id');
+    let thisModal = $(".modal__container[data-modal='" + modalName + "']")
+    let documentH = $(document).height();
+    thisModal.removeAttr("aria-hidden").addClass('open');
+    $("body").addClass("no_scroll");
+    modalPosition(thisModal)
+    $(el).find('.modal__overlay').css('height' , documentH)
+  }
+  function closeModal(el){
+    $(el).parents(".modal__container").attr("aria-hidden","true").removeClass('open');
+    $("body").removeClass("no_scroll");
+  }
+  function modalPosition(el){
+    let windowH = $(window).height();
+    let modal;
+    el == true ?  modal = $(el) :  modal = $(".modal__container.open");
+    const modalH = modal.find('.modal__content').height();
+    const overlay = modal.find('.modal__overlay');
+    const content = modal.find('.modal__content');
+    
+    if( modalH >= windowH - 100 ){
+      overlay.css('height', modalH + 100);
+      content.css({'position':'fixed','top':'50px'});
+      modal.scrollTop(0);
+    }else if( modalH < windowH ){
+      modal.find('.modal__overlay').css('height', windowH);
+      content.css({'position':'relative','top':'auto'});
+    }
+  }
