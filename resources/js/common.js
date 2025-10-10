@@ -2,6 +2,7 @@
 $(document).on('click', '.dropdown__value', function (e) {
   e.preventDefault();
   const t = $(this);
+  console.log(t);
   if ($(this).parents('.dropdown').hasClass('on')) {
     dropDownClose(t);
   } else {
@@ -159,8 +160,8 @@ $(window).on('load resize', function () {
     timer = setTimeout(modalPosition, 50);
   })
   function openModal(el){
-    const modalName = $(el).attr('id');
-    let thisModal = $(".modal__container[data-modal='" + modalName + "']")
+    const modalName = $(el).attr('data-modal');
+    let thisModal = $(".modal__container[id='" + modalName + "']")
     let documentH = $(document).height();
     thisModal.removeAttr("aria-hidden").addClass('open');
     $("body").addClass("no_scroll");

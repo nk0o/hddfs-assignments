@@ -126,12 +126,15 @@
 	&__box {
 		display: flex;
 		flex-direction: column;
-		margin-block: 80px 100px;
+		margin-block: 150px 80px;
 		padding-inline: 20px;
 		align-items: center;
 		text-align: center;
 		.badge {
 			margin-bottom: 12px;
+		}
+		&:first-child{
+			margin-top: 80px;
 		}
 	}
 	&__tit {
@@ -207,14 +210,43 @@
 .event-bottom {
 	padding: 48px 0 80px;
 	background-color: #f9fafb;
+	@media screen and (max-width: 1079px) {
+		background-color: transparent;
+		padding: 48px 0 32px;
+  }
 	&__inner {
 		max-width: 1120px;
 		margin: 0 auto;
 		padding: 0 20px;
 	}
+	&__tit{
+		margin-bottom: 20px;
+		font-size: 2rem;
+		font-weight: 700;
+		text-align: center;
+	}
 	.notice {
 		margin-top: 32px;
 		padding-top: 40px;
 		border-top: 1px dashed var(--color-border);
+	}
+}
+/* 이벤트 더보기 */
+
+.event-more {
+	&__btn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 335px;
+		width: 100%;
+		height: 50px;
+		margin: 0 auto 28px;
+		padding: 0 24px;
+		border-radius: 6px;
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: #fff;
+		background-image: linear-gradient(97deg, #ea2829 0%, #ea2869 49%, #ce28a5 74%, #a928ea 100%);
 	}
 }

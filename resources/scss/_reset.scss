@@ -121,7 +121,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
@@ -155,8 +155,8 @@ dd {
     margin-block-end: 0;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
     list-style: none;
 }
 
@@ -203,15 +203,54 @@ textarea:not([rows]) {
     scroll-margin-block: 5ex;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
-    font:inherit;
+    font: inherit;
     cursor: pointer;
     line-height: inherit;
 }
-select:focus, input:focus, textarea:focus, button:focus {
-  outline: none;
+select:focus,
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
-button{
-background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer}
+button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;
+}
+legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+input[type="text"],
+textarea,
+input[type="button"],
+input[type="submit"],
+input[type="search"] {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select:focus,
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

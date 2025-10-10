@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <button type="button" id="modal05" class="btn_modal__open">Open Modal - 사은품 선택</button>
-  <div class="modal__container fade" data-modal="modal05">
+  <button type="button" data-modal="modal01" class="btn_modal__open">Open Modal - 사은품 선택</button>
+  <div class="modal__container fade" id="modal05">
     <!-- modal__container -->
     <div class="modal__overlay" style="height: 842px;"></div>
     <div class="modal__content" style="position: relative; top: auto;">
@@ -19,14 +19,14 @@
         <img src="../resources/images/icon/ico_close.svg" alt="모달 닫기">
       </button>
       <div class="modal__header">
-        <h1 class="modal__tit">세트 구성보기</h1>
+        <h1 class="modal__tit">세트 구성 보기</h1>
       </div><!-- //.modal__header -->
       <div class="modal__body">
         <div class="scroll__inner">
           <div class="set-prd">
             <div class="set-prd__item">
               <div class="set-prd__img">
-                <img src="../resources/images/product/img-prd-01.webp" alt="상품명 이미지">
+                <img src="../resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
               </div>
               <div class="set-prd__info">
                 <strong class="set-prd__tit">구찌 뷰티</strong>
@@ -35,7 +35,25 @@
             </div><!-- //.set-prd__item -->
             <div class="set-prd__item">
               <div class="set-prd__img">
-                <img src="../resources/images/product/img-prd-01.webp" alt="상품명 이미지">
+                <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
+              </div>
+              <div class="set-prd__info">
+                <strong class="set-prd__tit">구찌 뷰티</strong>
+                <span class="set-prd__detail">구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나 구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나</span>
+              </div>
+            </div><!-- //.set-prd__item -->
+            <div class="set-prd__item">
+              <div class="set-prd__img">
+                <img src="../resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
+              </div>
+              <div class="set-prd__info">
+                <strong class="set-prd__tit">구찌 뷰티</strong>
+                <span class="set-prd__detail">구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나 구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나</span>
+              </div>
+            </div><!-- //.set-prd__item -->
+            <div class="set-prd__item">
+              <div class="set-prd__img">
+                <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
               </div>
               <div class="set-prd__info">
                 <strong class="set-prd__tit">구찌 뷰티</strong>
@@ -46,17 +64,17 @@
         </div><!-- //.modal__body -->
       </div>
       <div class="modal__footer">
-        <div class="btn_group">
+        <div class="btn-group">
           <div class="spinner">
-            <button type="button" class="spinner__btn-down" disabled>
+            <button type="button" class="spinner__btn spinner__btn--down" disabled>
               <div class="hide">감소</div>
             </button>
-            <input type="text" class="spinner__input" value="0" disabled>
-            <button type="button" class="spinner__btn-up">
+            <input id="spinner-input" type="text" class="spinner__input" value="1" disabled>
+            <button type="button" class="spinner__btn spinner__btn--up">
               <div class="hide">증가</div>
             </button>
           </div>
-          <button type="button" class="">장바구니담기</button>
+          <button type="button" class="btn-primary">장바구니담기</button>
         </div>
       </div><!-- //.modal__footer -->
     </div><!-- //.modal__content -->

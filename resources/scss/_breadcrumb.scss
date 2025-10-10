@@ -2,26 +2,97 @@
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 4px;
+  @media screen and (max-width: 1079px) {
+    display: none;
+  }
   &__item {
     position: relative;
-    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.3rem;
     line-height: 1.2142;
     text-decoration: none;
+    a {
+      flex: none;
+    }
     &::after {
       content: "";
-      position: absolute;
-      top: 50%;
-      right: -15px;
-      transform: translateY(-50%);
       width: 10px;
       height: 10px;
-      background: url("../images/icon/ico-chev-next-24-400.svg") center/contain no-repeat;
+      background: url("../images/icon/ico-chev-next-24-400.svg") center/contain
+        no-repeat;
     }
-    &:last-child::after {
-      display: none;
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .dropdown {
+    &__value {
+      justify-content: flex-start;
+      gap: 14px;
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+    &__list {
+      top: 28px;
+      left: -150px;
+      width: 320px;
+      height: auto;
+      padding: 12px 8px 12px 0;
+      overflow-y: visible;
+      border-radius: 10px;
+      border: 1px solid var(--color-primary);
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      ul {
+        max-height: 185px;
+        overflow: auto;
+        /* 스크롤 */
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+        }
+
+        &::-webkit-scrollbar-button:start:decrement,
+        &::-webkit-scrollbar-button:end:increment {
+          display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #ccd1d7;
+          border-radius: 10px;
+        }
+      }
+      li:not(.dropdown__list-group_opt) {
+        font-size: 1.3rem;
+        height: 24px;
+        padding: 6px 12px;
+        &:hover {
+          background-color: #f6f7fb;
+        }
+        & + li {
+          margin-top: 4px;
+        }
+      }
+    }
+    &.on {
+      .dropdown__list {
+        max-height: 218px;
+        opacity: 1;
+        overflow: hidden;
+        transform: translateY(0);
+      }
     }
   }
 }
-
-
