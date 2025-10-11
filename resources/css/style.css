@@ -771,6 +771,20 @@ body.no_scroll {
     overflow-x: auto;
     background-color: transparent;
   }
+  .footer__menu::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .footer__menu::-webkit-scrollbar-button, .footer__menu::-webkit-scrollbar-button {
+    display: none;
+  }
+  .footer__menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .footer__menu::-webkit-scrollbar-thumb {
+    background: var(--color-text-gray);
+    border-radius: 10px;
+  }
 }
 .footer__sns {
   margin-bottom: 24px;
@@ -798,6 +812,13 @@ body.no_scroll {
   gap: 30px;
   padding: 15px 0 14px;
   font-size: 1.4rem;
+}
+@media screen and (max-width: 1079px) {
+  .footer__link-list {
+    width: 100%;
+    gap: 12px;
+    justify-content: space-between;
+  }
 }
 .footer__link-list li {
   flex: none;

@@ -497,6 +497,24 @@ body {
     @media screen and (max-width: 1079px) {
       overflow-x: auto;
       background-color: transparent;
+      &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+        }
+
+        &::-webkit-scrollbar-button,
+        &::-webkit-scrollbar-button {
+          display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: var(--color-text-gray);
+          border-radius: 10px;
+        }
     }
   }
   &__sns {
@@ -525,6 +543,11 @@ body {
     gap: 30px;
     padding: 15px 0 14px;
     font-size: 1.4rem;
+    @media screen and (max-width: 1079px) {
+      width: 100%;
+      gap: 12px;
+      justify-content: space-between;
+    }
     li {
       flex: none;
     }
