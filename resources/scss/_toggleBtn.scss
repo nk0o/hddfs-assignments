@@ -1,0 +1,56 @@
+.toggle-btn {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  &__label {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    border-radius: 9999999px;
+    background: #dcdee4;
+    transition: all .4s ease-out;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background: #fff;
+      z-index: 2;
+      transition: all .2s ease-out;
+    }
+  }
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    z-index: 5;
+    cursor: pointer;
+    &:checked + label {
+      background: #3d434f;
+      &:after {
+        left: 14px;
+      }
+    }
+    &:disabled{
+      cursor:default;
+    }
+    &:disabled + label {
+      background-color: var(--color-text-light) !important;
+    }
+  }
+  &__txt {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.4rem;
+  }
+}

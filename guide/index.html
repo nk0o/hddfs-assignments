@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Product List | Guide</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="../resources/css/style.css">
+  <style>
+    body {
+      padding: 24px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+    }
+
+    .guideline {
+      padding: 24px;
+      border: 1px solid;
+      border-radius: 16px;
+    }
+
+    .guideline+.guideline {
+      margin-top: 16px;
+    }
+
+    .guideline__tit {
+      margin-bottom: 12px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .dropdown,
+    .tab-menu {
+      max-width: 360px;
+      display: block;
+    }
+
+    .brand-card {
+      max-width: 120px;
+    }
+
+    .prd-card {
+      max-width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>퍼블리싱 UI 가이드</h1>
+  <!-- 상품 카드 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">Product Card</h2>
+    <div class="guideline__cont">
+      <div class="product-sec__list prd-list">
+        <div class="prd-card">
+          <a href="javascript:void(0)">
+            <div class="prd-card__img">
+              <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+              <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+            </div>
+            <div class="prd-card__info">
+              <div class="prd-card__brand">라네즈</div>
+              <div class="prd-card__period">~6/30일까지 40% 세일</div>
+              <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글) 라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+              <div class="prd-card__price">
+                <div class="prd-card__price-percent">70%</div>
+                <div class="prd-card__price-sale">$11.7
+                  <span class="prd-card__price-won">28,320원</span>
+                </div>
+                <div class="prd-card__price-original">$39</div>
+              </div>
+              <div class="prd-card__badges">
+                <div class="badge">세일</div>
+                <div class="badge">품절임박</div>
+              </div>
+            </div>
+          </a>
+        </div><!-- //.prd-card -->
+      </div><!-- //.prd-list -->
+    </div><!-- //.guideline__cont -->
+  </div>
+  <!-- 브랜드 카드 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">Brand Card</h2>
+    <div class="guideline__cont">
+      <div class="swiper-slide brand-card">
+        <a href="javascript:void(0)">
+          <div class="brand-card__img">
+            <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
+            <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
+          </div>
+          <div class="brand-card__tit">오쏘몰</div>
+        </a>
+      </div>
+    </div><!-- //.guideline__cont -->
+  </div>
+  <!-- 토글버튼 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">Toggle Button</h2>
+    <div class="guideline__cont">
+      <div class="prd-filter__toggle">
+        <p class="toggle-btn__txt"><img src="/resources/images/icon/ico-info.svg" class="pc-hide" alt>품절<span
+            class="mo-hide">제외</span></p>
+        <div class="toggle-btn">
+          <input id="toggleBtn" class="toggle-btn__input" type="checkbox" checked />
+          <label for="toggleBtn" class="toggle-btn__label"></label>
+        </div>
+      </div>
+    </div><!-- //.guideline__cont -->
+  </div>
+  <!-- 뱃지 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">Badge</h2>
+    <div class="guideline__cont">
+      <span class="badge bg_primary">묶음</span>&nbsp;&nbsp;&nbsp;
+      <span class="badge bg_green">무료강의</span>&nbsp;&nbsp;&nbsp;
+      <span class="badge bg_mint">현금</span>&nbsp;&nbsp;&nbsp;
+      <span class="badge bg_light_orange">카드</span>
+    </div><!-- //.guideline__cont -->
+  </div>
+  <!-- 탭메뉴 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">TabMenu</h2>
+    <div class="guideline__cont">
+      <div class="tab-menu tab-menu--line">
+        <ul>
+          <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>행사</button></li>
+          <li class="tab-menu__list" data-tab="tab1-2" role="tab" tabindex="1"><button>추천상품</button></li>
+          <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>전체상품</button></li>
+        </ul>
+        <div class="tab-menu__bar"></div>
+      </div><!-- //.tab-menu -->
+
+      <div class="tab-menu tab-menu--round">
+        <ul>
+          <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>아우구스티누스 바더</button></li>
+          <li class="tab-menu__list" data-tab="tab1-2" role="tab" tabindex="1"><button>아우구스티누스 바더</button></li>
+        </ul>
+        <div class="tab-menu__bar"></div>
+      </div><!-- //.tab-menu -->
+    </div><!-- //.guideline__cont -->
+  </div>
+  <!-- 모달 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">Modal</h2>
+    <div class="guideline__cont">
+      <button type="button" data-modal="modal01" class="btn-primary btn--modal-open">Open Modal</button>
+      <div class="modal__container fade" id="modal01">
+        <!-- modal__container -->
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <button type="button" class="modal__btn-close">
+            <img src="../resources/images/icon/ico_close.svg" alt="모달 닫기">
+          </button>
+          <div class="modal__header">
+            <h1 class="modal__tit">세트 구성 보기</h1>
+          </div><!-- //.modal__header -->
+          <div class="modal__body">
+            <div class="set-prd__sale">
+              <span>36%</span>
+              <p>풀리오 최강 마사지 조합 풀리오 세트 A 풀리오 최강 마사지 조합 풀리오 세트 A</p>
+            </div>
+            <div class="scroll__inner">
+              <div class="set-prd">
+                <div class="set-prd__item">
+                  <div class="set-prd__img">
+                    <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
+                  </div>
+                  <div class="set-prd__info">
+                    <strong class="set-prd__tit">구찌 뷰티</strong>
+                    <span class="set-prd__detail">구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나 구찌 루즈 아 레브르 매트 208 데이 멧 인
+                      아르헨티나</span>
+                  </div>
+                </div><!-- //.set-prd__item -->
+                <div class="set-prd__item">
+                  <div class="set-prd__img">
+                    <img src="../resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
+                  </div>
+                  <div class="set-prd__info">
+                    <strong class="set-prd__tit">구찌 뷰티</strong>
+                    <span class="set-prd__detail">구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나 구찌 루즈 아 레브르 매트 208 데이 멧 인
+                      아르헨티나</span>
+                  </div>
+                </div><!-- //.set-prd__item -->
+                <div class="set-prd__item">
+                  <div class="set-prd__img">
+                    <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
+                  </div>
+                  <div class="set-prd__info">
+                    <strong class="set-prd__tit">구찌 뷰티</strong>
+                    <span class="set-prd__detail">구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나 구찌 루즈 아 레브르 매트 208 데이 멧 인
+                      아르헨티나</span>
+                  </div>
+                </div><!-- //.set-prd__item -->
+                <div class="set-prd__item">
+                  <div class="set-prd__img">
+                    <img src="../resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
+                  </div>
+                  <div class="set-prd__info">
+                    <strong class="set-prd__tit">구찌 뷰티</strong>
+                    <span class="set-prd__detail">구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나 구찌 루즈 아 레브르 매트 208 데이 멧 인
+                      아르헨티나</span>
+                  </div>
+                </div><!-- //.set-prd__item -->
+                <div class="set-prd__item">
+                  <div class="set-prd__img">
+                    <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
+                  </div>
+                  <div class="set-prd__info">
+                    <strong class="set-prd__tit">구찌 뷰티</strong>
+                    <span class="set-prd__detail">구찌 루즈 아 레브르 매트 208 데이 멧 인 아르헨티나 구찌 루즈 아 레브르 매트 208 데이 멧 인
+                      아르헨티나</span>
+                  </div>
+                </div><!-- //.set-prd__item -->
+              </div>
+            </div><!-- //.modal__body -->
+          </div>
+          <div class="modal__footer">
+            <div class="btn-group">
+              <div class="spinner">
+                <button type="button" class="spinner__btn spinner__btn--down" disabled>
+                  <div class="hide">감소</div>
+                </button>
+                <input id="spinner-input" type="text" class="spinner__input" value="1" disabled>
+                <button type="button" class="spinner__btn spinner__btn--up">
+                  <div class="hide">증가</div>
+                </button>
+              </div>
+              <button type="button" class="btn-primary btn_cart">장바구니담기</button>
+            </div>
+          </div><!-- //.modal__footer -->
+        </div><!-- //.modal__content -->
+      </div><!-- //.modal__container -->
+    </div><!-- //.guideline__cont -->
+  </div>
+  <!-- 드롭다운 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">Dropdown</h2>
+    <div class="guideline__cont">
+      <div class="dropdown">
+        <div class="dropdown__value"><span>Family Sites</span></div>
+        <div class="dropdown__list dropdown__list-group">
+          <ul>
+            <li class="dropdown__list-group_opt">
+              <div class="list_tit">쇼핑몰 사이트</div>
+              <ul>
+                <li><a href="http://www.hyundaihmall.com/" target="_blank">현대Hmall</a></li>
+                <li><a href="http://www.thehyundai.com/" target="_blank">더현대닷컴</a></li>
+                <li><a href="http://www.thehandsome.com/" target="_blank">더한섬</a></li>
+                <li><a href="http://mall.hyundailivart.co.kr/" target="_blank">현대리바트몰</a></li>
+                <li><a href="http://www.hfashionmall.com/" target="_blank">H패션몰</a></li>
+              </ul>
+            </li>
+            <li class="dropdown__list-group_opt">
+              <div class="list_tit">관계사 사이트</div>
+              <ul>
+                <li><a href="http://www.ehyundai.com/newPortal/ir/main.do" target="_blank">현대백화점그룹</a></li>
+                <li><a href="https://www.ehyundai.com/newPortal/index.do" target="_blank">현대백화점</a>
+                </li>
+                <li><a href="https://www.hyundaihmall.com/" target="_blank">현대홈쇼핑</a></li>
+                <li><a href="https://hyundaigreenfood.com/" target="_blank">현대그린푸드</a></li>
+                <li><a href="http://www.hyundaicatering.co.kr/" target="_blank">현대캐터링시스템</a></li>
+                <li><a href="http://www.cnsfoodsystem.co.kr/" target="_blank">C&amp;S푸드시스템</a></li>
+                <li><a href="https://www.handsome.co.kr/ko/main.do" target="_blank">한섬</a></li>
+                <li><a href="https://www.hyundailivart.co.kr/" target="_blank">현대리바트</a></li>
+                <li><a href="http://www.hyundailnc.com/" target="_blank">현대L&amp;C</a></li>
+                <li><a href="http://home.hyundaidreamtour.com/" target="_blank">현대드림투어</a></li>
+                <li><a href="https://www.hyundaifuturenet.com/" target="_blank">현대퓨처넷</a></li>
+                <li><a href="http://www.everdigm.com/" target="_blank">에버다임</a></li>
+                <li><a href="http://www.hyundaibioland.co.kr/" target="_blank">현대바이오랜드</a></li>
+                <li><a href="https://www.ezwel.com/" target="_blank">현대이지웰</a></li>
+                <li><a href="https://sikdae.com" target="_blank">벤디스(식권대장)</a></li>
+                <li><a href="http://www.ehyundai.com/newPortal/sc/main/main.do" target="_blank">현대백화점그룹
+                    사회복지재단</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- //.guideline__cont -->
+  </div>
+  <!-- 바텀시트 -->
+  <div class="guideline">
+    <h2 class="guideline__tit">Bottom Sheet</h2>
+    <div class="guideline__cont">
+      <button class="btn-primary" data-btmsheet="btmSheet01">Open Bottom Sheet At
+        Mobile</button>
+      <div class="btmsheet" id="btmSheet01"><!-- data-btmsheet="btmSheet02" -->
+        <div class="btmsheet__back"></div>
+        <div class="btmsheet__inner">
+          <div class="btmsheet__head">
+            <button type="button" class="btmsheet__handle"></button>
+          </div><!-- //.btmsheet_head -->
+          <div class="btmsheet__cont">
+            <div class="btmsheet__search">
+              <form action="" name="" class="search-box">
+                <button type="button" class="search-box__close"><span class="hide">기획전목록 닫기</span></button>
+                <legend>검색</legend>
+                <input id="btmsheetSearch" class="search-box__input" type="text" maxlength="50" name=""
+                  placeholder="브랜드명으로 검색해보세요" />
+                <label for="gnbSearch"><span class="hide">검색어 입력</span></label>
+                <button type="submit" class="search-box__btn"><span class="hide">검색</span></button>
+              </form>
+            </div>
+            <div class="btmsheet__tab">
+              <div class="tab-menu tab-menu--line">
+                <ul>
+                  <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>전체</button>
+                  </li>
+                  <li class="tab-menu__list" data-tab="tab1-2" role="tab" tabindex="1"><button>스킨케어</button></li>
+                  <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>메이크업</button></li>
+                  <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>향수/헤어/바디</button></li>
+                  <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>가방/지갑</button></li>
+                </ul>
+              </div>
+            </div>
+            <ul class="event-banner__list">
+              <li class="event-banner__item">
+                <a href="javascript:void(0)">
+                  <img src="/resources/images/event/img-banner-1.png" alt="라네즈 외 7개 브랜드 햇살 가림 상품 기획전">
+                </a>
+              </li>
+              <li class="event-banner__item">
+                <a href="javascript:void(0)">
+                  <img src="/resources/images/event/img-banner-2.png" alt="차앤박 구매사은행사">
+                </a>
+              </li>
+              <li class="event-banner__item">
+                <a href="javascript:void(0)">
+                  <img src="/resources/images/event/img-banner-3.png" alt="수려한 구매사은행사">
+                </a>
+              </li>
+              <li class="event-banner__item">
+                <a href="javascript:void(0)">
+                  <img src="/resources/images/event/img-banner-4.png" alt="이니스프리 기획전">
+                </a>
+              </li>
+              <li class="event-banner__item">
+                <a href="javascript:void(0)">
+                  <img src="/resources/images/event/img-banner-5.png" alt="볼앤체인 포토리뷰 이벤트">
+                </a>
+              </li>
+            </ul>
+          </div><!-- //.btmsheet_cont -->
+        </div><!-- //.inner -->
+      </div><!-- //.btmsheet -->
+    </div><!-- //.guideline__cont -->
+  </div>
+
+  <script src="../resources/js/common.js"></script>
+
+</body>
+
+</html>

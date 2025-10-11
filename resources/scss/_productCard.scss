@@ -1,12 +1,22 @@
 .prd-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 40px 24px;
   @media screen and (max-width: 1079px) {
     gap: 32px 10px;
   }
   .prd-card {
     flex: 0 0 calc(25% - 24px);
+    @media screen and (max-width: 1079px) {
+      flex: 0 0 calc(25% - 10px);
+    }
+    @media screen and (max-width: 767px) {
+      flex: 0 0 calc(33.3333% - 10px);
+    }
+    @media screen and (max-width: 479px) {
+      flex: 0 0 calc(50% - 10px);
+    }
   }
   &__col-3 {
     .prd-card {
@@ -14,11 +24,15 @@
       @media screen and (max-width: 1079px) {
         flex: 0 0 calc(33.333% - 10px);
       }
+      @media screen and (max-width: 479px) {
+        flex: 0 0 calc(50% - 10px);
+      }
     }
   }
 }
 .prd-card {
   $this: &;
+  min-width: 100px;
   &.checked {
     #{$this}__img {
       &::before {
@@ -44,6 +58,10 @@
     background: rgba(0, 0, 0, 0.3) url("../images/icon/ico-product-cart.svg")
       center/50% no-repeat;
     border-radius: 8px 0px;
+    @media screen and (max-width: 1079px) {
+      width: 30px;
+      height: 30px;
+    }
   }
   &__img {
     overflow: hidden;
@@ -70,6 +88,9 @@
   }
   &__info {
     margin-top: 20px;
+    @media screen and (max-width: 1079px) {
+      margin-top: 16px;
+    }
   }
   &__tit {
     display: block;
@@ -84,6 +105,9 @@
     word-wrap: normal;
     overflow: hidden;
     text-align: left;
+    @media screen and (max-width: 1079px) {
+      font-size: 1.3rem;
+    }
   }
   &__price {
     display: flex;
@@ -96,7 +120,9 @@
     font-weight: 700;
     text-align: left;
     color: var(--color-primary);
-    &
+    @media screen and (max-width: 1079px) {
+      margin: 8px 0 0;
+    }
     &-sale {
       display: flex;
       align-items: center;
@@ -106,7 +132,7 @@
       order: 1;
       font-size: 1.5rem;
     }
-    &-won{
+    &-won {
       color: var(--color-text-prd);
       font-weight: 400;
       line-height: 1.2;
@@ -123,18 +149,24 @@
     font-weight: 700;
     line-height: 1.2;
   }
+  &__period {
+    margin-bottom: 2px;
+    font-size: 1.3rem;
+    color: #ea2869;
+  }
   &__badges {
     display: flex;
     align-items: center;
     gap: 4px;
     margin-top: 8px;
     .badge {
-      background-color: #fff;
-      border: 1px solid #CCD1D8;
+      height: 24px;
+      padding: 0 6px;
       border-radius: 6px;
       font-size: 1.2rem;
-      color: #5C6677;
-      height: 24px;
+      color: #5c6677;
+      background-color: #fff;
+      border: 1px solid #ccd1d8;
     }
   }
 }
@@ -188,12 +220,18 @@
     border-radius: 0 0 16px 16px;
     border: 1px solid var(--color-border);
     border-top: none;
+    @media screen and (max-width: 1079px) {
+      padding: 0 16px;
+    }
   }
   &__com {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    @media screen and (max-width: 1079px) {
+      padding: 12px 0;
+    }
   }
   &__txt {
     flex: none;
@@ -202,6 +240,9 @@
     gap: 4px;
     font-size: 1.4rem;
     color: var(--color-text-light);
+    @media screen and (max-width: 1079px) {
+      font-size: 1.2rem;
+    }
     &::before {
       content: "";
       display: block;
@@ -213,6 +254,7 @@
   }
   &__thumbnail {
     button {
+      position: relative;
       cursor: pointer;
       width: 32px;
       height: 32px;
@@ -223,6 +265,13 @@
         object-fit: cover;
         transform: scale(1);
         transition: transform 0.3s ease;
+      }
+      &::before {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(12, 54, 122, 0.04);
       }
       &:hover {
         img {
@@ -241,10 +290,25 @@
     line-height: 1.25;
     font-weight: 700;
     color: var(--color-primary);
+    @media screen and (max-width: 1079px) {
+      padding: 16px 0;
+      .btn-primary {
+        height: 32px;
+        font-size: 1.3rem;
+        padding-inline: 14px;
+      }
+    }
     &-box {
       display: flex;
       flex-direction: column;
       gap: 12px;
+      @media screen and (max-width: 1079px) {
+        text-align: left;
+        gap: 0;
+        span {
+          font-size: 1.3rem;
+        }
+      }
     }
     &-sale {
       color: var(--color-danger);
@@ -269,6 +333,30 @@
     border-top: 1px solid #f7f7f9;
     &:first-child {
       border-top: 0;
+      padding-top: 0;
+    }
+  }
+  &__sale{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    span{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--color-danger);
+    }
+    p{
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   &__item {
@@ -331,5 +419,81 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+/* 상품 필터 */
+.prd-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 3px solid var(--color-primary);
+  @media screen and (max-width: 1079px) {
+    padding: 8px 0;
+    border-bottom: none;
+  }
+  & > * {
+    flex: none;
+  }
+  &__btn {
+    height: 30px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+  }
+  &__count {
+    display: flex;
+    gap: 4px;
+    margin-left: 18px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    @media screen and (max-width: 1079px) {
+      margin-left: 0;
+    }
+  }
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 12px;
+    margin-left: auto;
+    padding-right: 12px;
+    border-right: 1px solid var(--color-border);
+  }
+  &__order {
+    .dropdown {
+      min-width: 110px;
+      @media screen and (max-width: 1079px) {
+        min-width: 0;
+      }
+      &.on .dropdown__value::after {
+        transform: rotate(-90deg);
+      }
+      &__value {
+        height: 24px;
+        padding: 0;
+        font-size: 1.4rem;
+        border: none;
+        &::after {
+          position: relative;
+          inset: 0;
+          width: 20px;
+          height: 20px;
+          background: url("../images/icon/ico-arrow.svg") center/contain
+            no-repeat;
+          transform: rotate(90deg);
+        }
+      }
+      &__list {
+        top: 24px;
+        li:not(.dropdown__list-group_opt) {
+          font-size: 1.4rem;
+          height: 20px;
+        }
+      }
+    }
+  }
+  &__icon {
+    margin-left: 16px;
   }
 }

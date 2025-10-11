@@ -1,0 +1,115 @@
+//Bottom Sheet
+.btmsheet {
+  //변수
+  $BtmSheetRadius: 32px;
+  //display: none;
+  position: relative;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  &__inner {
+    max-width: 700px;
+    overflow-y: auto;
+    position:fixed;
+    z-index: 2;
+    border-top-left-radius: $BtmSheetRadius;
+    border-top-right-radius: $BtmSheetRadius;
+    transition: all 0.2s ease-in-out;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    bottom: -110%;
+    width: 100%;
+    background: #fff;
+  }
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.2s ease-in-out;
+    z-index: 1002;
+    .btmsheet{
+      &__back {
+        z-index: 1000;
+        opacity: 1;
+        pointer-events: all;
+      } 
+      &__inner {
+        z-index: 1001;
+        bottom: 0;
+        transform: translate(-50%, 0%);
+      }
+    }
+  }
+  &__handle{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 24px;
+    cursor: pointer;
+    &::after{
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      margin: 0 auto;
+      border-radius: 9999px;
+      background-color: #EBEBEB;
+    }
+  }
+  &__back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background:rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+  &__tit{
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  &__close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 32px;
+    width: 20px;
+    height: 20px;
+    margin-left: 32px;
+    cursor: pointer;
+  }
+  &__footer{
+    padding:20px 20px 0;    
+  }
+  &__cont{
+    overflow: auto;
+    max-height: 80dvh;
+  }
+  &__search{
+    margin-top: 12px;
+  }
+  &__tab{
+    border-bottom: 1px solid var(--color-border);
+    .tab-menu{
+      display: flex;
+      justify-content: flex-start;
+      ul{
+        flex-wrap: nowrap;        
+        overflow-x: auto;
+        padding-inline: 24px;
+      }
+      .tab-menu__list{
+        flex: none;
+        & + .tab-menu__list{
+          margin-left: 24px;
+        }
+        & > button, & > a{
+          padding: 0;
+        }
+      }
+    }
+  }
+}
