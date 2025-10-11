@@ -66,12 +66,9 @@ function clearInput(obj) {
 };
 
 
-
-
-
-
-
 /**** Tab UI ****/
+
+$(document).on('click', '.tab_menu .tab_list', function () { tabMenu(this) });
 
 function LineTabMenuInit() {
   var tabM = $('.tab_menu');
@@ -90,8 +87,6 @@ function LineTabMenuInit() {
     });
   })
 };
-
-$(document).on('click', '.tab_menu .tab_list', function () { tabMenu(this) });
 
 function tabMenu(el) {
   var tab = $(el).parents('.tab_menu');
@@ -121,71 +116,97 @@ $(window).on('load resize', function () {
   LineTabMenuInit()
 });
 
-/**** 장바구니 담기 ****/
-  $('.prd-wrap.ir').on('click', '.prd-card', function (e) {
-    e.preventDefault();
-    let imgSrc = $(this).find('img').attr('src');
-    let $parent = $(this).parent();
-    if ($parent.hasClass('checked')) {
-      $parent.removeClass('checked');
-      $parent.find('.ani_cart').remove();
-    } else {
-      $parent.addClass('checked');
-      $parent.append(
-        '<div class="ani_cart"><div class="ir_cart"><img scr="" alt=""></div></div>'
-      );
-      $parent.find('.ani_cart img').attr('src', imgSrc);
-      $parent.find('.ani_cart').addClass('active');
-      setTimeout(function () {
-        $parent.find('.ani_cart').removeClass('active');
-      }, 1000);
-    }
-    let count = $('.prd-wrap').find('.prd-card.checked').length;
-    $('.prd_cart_btn .count').text(count);
-  });
-
 /**** Modal UI ****/
-  $(document).on('click', '.btn_modal__open', function(e){
-    e.preventDefault(); 
-    let $target = $(e.target).hasClass('btn_modal__open')? e.target : $(e.target).closest('.btn_modal__open');
-    openModal($target);
-  }); 
-  $(document).on('click', '.modal__btn-close', function(e){
-    e.preventDefault();
-    closeModal(e.target);
-  });
-  let timer = null;
-  $(window).on('resize', function(){//resize modal
-    clearTimeout(timer);
-    timer = setTimeout(modalPosition, 50);
-  })
-  function openModal(el){
-    const modalName = $(el).attr('data-modal');
-    let thisModal = $(".modal__container[id='" + modalName + "']")
-    let documentH = $(document).height();
-    thisModal.removeAttr("aria-hidden").addClass('open');
-    $("body").addClass("no_scroll");
-    modalPosition(thisModal)
-    $(el).find('.modal__overlay').css('height' , documentH)
+$(document).on('click', '.btn--modal-open', function (e) {
+  e.preventDefault();
+  let $target = $(e.target).hasClass('btn--modal-open') ? e.target : $(e.target).closest('.btn--modal-open');
+  openModal($target);
+});
+$(document).on('click', '.modal__btn-close', function (e) {
+  e.preventDefault();
+  closeModal(e.target);
+});
+$(document).on('click', '.modal__overlay', function (e) {
+  e.preventDefault();
+  closeModal(e.target);
+});
+let timer = null;
+$(window).on('resize', function () {//resize modal
+  clearTimeout(timer);
+  timer = setTimeout(modalPosition, 50);
+})
+function openModal(el) {
+  const modalName = $(el).attr('data-modal');
+  let thisModal = $(".modal__container[id='" + modalName + "']")
+  let documentH = $(document).height();
+  thisModal.removeAttr("aria-hidden").addClass('open');
+  $("body").addClass("no_scroll");
+  modalPosition(thisModal)
+  $(el).find('.modal__overlay').css('height', documentH)
+}
+function closeModal(el) {
+  $(el).parents(".modal__container").attr("aria-hidden", "true").removeClass('open');
+  $("body").removeClass("no_scroll");
+}
+function modalPosition(el) {
+  let windowH = $(window).height();
+  let modal;
+  el == true ? modal = $(el) : modal = $(".modal__container.open");
+  const modalH = modal.find('.modal__content').height();
+  const overlay = modal.find('.modal__overlay');
+  const content = modal.find('.modal__content');
+
+  if (modalH >= windowH - 100) {
+    overlay.css('height', modalH + 100);
+    content.css({ 'position': 'fixed', 'top': '50px' });
+    modal.scrollTop(0);
+  } else if (modalH < windowH) {
+    modal.find('.modal__overlay').css('height', windowH);
+    content.css({ 'position': 'relative', 'top': 'auto' });
   }
-  function closeModal(el){
-    $(el).parents(".modal__container").attr("aria-hidden","true").removeClass('open');
-    $("body").removeClass("no_scroll");
+}
+
+/**** 장바구니 담기 ****/
+$('.prd-wrap.ir').on('click', '.prd-card', function (e) {
+  e.preventDefault();
+  let imgSrc = $(this).find('img').attr('src');
+  let $parent = $(this).parent();
+  if ($parent.hasClass('checked')) {
+    $parent.removeClass('checked');
+    $parent.find('.ani_cart').remove();
+  } else {
+    $parent.addClass('checked');
+    $parent.append(
+      '<div class="ani_cart"><div class="ir_cart"><img scr="" alt=""></div></div>'
+    );
+    $parent.find('.ani_cart img').attr('src', imgSrc);
+    $parent.find('.ani_cart').addClass('active');
+    setTimeout(function () {
+      $parent.find('.ani_cart').removeClass('active');
+    }, 1000);
   }
-  function modalPosition(el){
-    let windowH = $(window).height();
-    let modal;
-    el == true ?  modal = $(el) :  modal = $(".modal__container.open");
-    const modalH = modal.find('.modal__content').height();
-    const overlay = modal.find('.modal__overlay');
-    const content = modal.find('.modal__content');
-    
-    if( modalH >= windowH - 100 ){
-      overlay.css('height', modalH + 100);
-      content.css({'position':'fixed','top':'50px'});
-      modal.scrollTop(0);
-    }else if( modalH < windowH ){
-      modal.find('.modal__overlay').css('height', windowH);
-      content.css({'position':'relative','top':'auto'});
-    }
+  let count = $('.prd-wrap').find('.prd-card.checked').length;
+  $('.prd_cart_btn .count').text(count);
+});
+
+
+//카트 담기
+$(document).on('click', '.btn_cart', function(){
+  if(!$('.cart-msg').length){
+    putInCartAction();
   }
+})
+function putInCartAction(){
+  $('.wrap').append(`
+    <div class="cart-msg">
+      <div class="cart-msg__ani">
+        <div class="cart-msg__icon"><span></span>
+      </div>
+    </div>
+    <div class="cart-msg__text"><p>장바구니에 담겼습니다:)</p></div>
+    `)
+  $('.cart-msg').addClass('active');
+  setTimeout(function() {
+    $('.cart-msg').removeClass('active').remove();
+  },2200)
+}

@@ -165,12 +165,15 @@
 		&--brand {
 			max-width: 1220px;
 			padding-inline: 20px;
+			@media screen and (max-width: 1079px) {
+			padding-inline: 0px;
+		}
 		}
 		.set-card{
 			margin: 0 auto;
 		}
 	}
-	.swiper-brand {
+	.brand__swiper {
 		overflow: hidden;
 		max-width: 1080px;
 		margin: 0 44px;
@@ -186,7 +189,7 @@
 				flex-wrap: wrap;
 				justify-content: center;
 				align-items: center;
-				gap: 32px 16px;
+				gap: 20px 16px;
 			}
 			.swiper-button-next,
 			.swiper-button-prev,
@@ -194,16 +197,22 @@
 				display: none;
 			}		
 			.brand-card {
-				flex: 1 1 calc(33.333% - 16px);
+				flex: 0 1 calc(33.333% - 16px);
 				max-width: 160px;
 			}
 		}
 	}
-	.swiper-sale_prd {
+	.sale-prd__swiper {
 		overflow: hidden;
 		max-width: 810px;
 		margin: 0 auto;
 		padding: 0 0 40px;
+		@media screen and (min-width: 1080px) {
+			.prd-card__price-sale{
+				flex: 0;
+				order: 0;
+			}
+		}
 	}
 }
 /* 이벤트 하단 */
@@ -248,5 +257,59 @@
 		font-weight: 700;
 		color: #fff;
 		background-image: linear-gradient(97deg, #ea2829 0%, #ea2869 49%, #ce28a5 74%, #a928ea 100%);
+	}
+}
+.recomend-prd{
+	position: relative;
+	overflow: hidden;
+	background-color: #f6f7fb;
+	padding: 36px 44px;
+	.prd-card__img::before{
+		background-color: rgb(255, 255, 255,0.04);
+	}
+	&__swiper{
+		overflow: hidden;
+		.swiper-button-prev,.swiper-button-next{
+			width: 44px;
+			height: 44px;
+			background: #fff;
+			border-radius: 100%;
+			box-shadow: 0px 7px 12px -1px rgba(0,0,0,0.28);
+			&::before{
+				content: '';
+				display: block;
+				width: 24px;
+				height: 24px;
+				background:url('../images/icon/ico-arrow.svg') center/contain no-repeat;
+			}
+		}
+		.swiper-button-prev{
+			transform: none;
+			left: 24px;
+			&::before{
+				transform: rotate(180deg);
+			}
+		}
+		.swiper-button-next{
+			right: 24px;
+		}
+	}
+}
+/* 이벤트하단 상품섹션 */
+.product-sec{
+	&__inner{
+		max-width: 1120px;
+		margin: 24px auto;
+		padding-inline: 20px;
+	}
+	&__tit{
+		margin-bottom: 24px;
+		font-weight: 700;
+		font-size: 2.4rem;
+	}
+	&__list{
+		.prd-card__img::before{
+		background-color: transparent
+	}
 	}
 }

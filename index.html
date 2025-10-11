@@ -158,7 +158,7 @@
             <h3 class="event-content__tit">라네즈 외 7개 브랜드<br>40% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 40% 할인가에 만나보세요!</p>
             <div class="event-content__cont event-content__cont--brand">
-              <div class="ui-swiper swiper-brand">
+              <div class="ui-swiper brand__swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
@@ -243,7 +243,7 @@
             <h3 class="event-content__tit">햇살 가리는 SUN 제품<br>70% 할인</h3>
             <p class="event-content__subtit">7개 브랜드의 SUN 제품을 70% 할인가에 만나보세요!</p>
             <div class="event-content__cont">
-              <div class="ui-swiper swiper-sale_prd prd-wrap">
+              <div class="ui-swiper sale-prd__swiper prd-wrap">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide prd-list prd-list__col-3">
                     <div class="prd-card">
@@ -253,7 +253,7 @@
                           <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
                         </div>
                         <div class="prd-card__info">
-                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글) 라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
                           <div class="prd-card__price">
                             <div class="prd-card__price-percent">70%</div>
                             <div class="prd-card__price-sale">$11.7</div>
@@ -443,7 +443,7 @@
                   </div><!-- //.swiper-slide -->
                 </div>
                 <div class="swiper-pagination"></div>
-              </div><!-- //.swiper-sale_prd -->
+              </div><!-- //.sale-prd__swiper -->
             </div>
           </article>
           <!-- evnet3: 세트상품 그룹 -->
@@ -453,7 +453,7 @@
             <p class="event-content__subtit">라네즈 래디언씨 선크림 SPF50+/PA++++ 50ml + 네어 에센셜 블러링 피니시 파우더(싱글)</p>
             <div class="event-content__cont">
               <div class="set-card">
-                <div class="ui-swiper swiper-set_img set-card__img">
+                <div class="ui-swiper set-card__swiper set-card__img">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
                     </div>
@@ -466,9 +466,9 @@
                   <div class="set-card__com">
                     <div class="set-card__txt">상품구성</div>
                     <div class="set-card__thumbnail">
-                      <button type="button" data-modal="modal01" class="btn_modal__open"><img
+                      <button type="button" data-modal="modal01" class="btn--modal-open"><img
                           src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지"></button>
-                      <button type="button" data-modal="modal01" class="btn_modal__open"><img
+                      <button type="button" data-modal="modal01" class="btn--modal-open"><img
                           src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지"></button>
                     </div>
                   </div>
@@ -483,7 +483,7 @@
                         <span class="set-card__price-sale">$11.7</span>
                       </div>
                     </div>
-                    <button data-modal="modal01" class="set-card__cart btn-primary btn_modal__open">담기</button>
+                    <button data-modal="modal01" class="set-card__cart btn-primary btn--modal-open">담기</button>
                   </div>
                 </div><!-- //.set-card__info -->
               </div><!-- //.set-card -->
@@ -572,14 +572,106 @@
           </div>
         </section>
         <div class="pc-hide">
-          <button data-modal="modal01" class="event-more__btn btn_modal__open">더 많은 기획전 행사가 궁금하다면</button>
+          <button data-modal="modal01" class="event-more__btn btn--modal-open">더 많은 기획전 행사가 궁금하다면</button>
         </div>
         <!-- E: 이벤트 하단 -->
         <!-- S: 추천상품 -->
-        <section class="product-recommend"></section>
+        <hr class="divider pc-hide">
+        <section class="product-sec">
+          <div class="product-sec__inner">
+            <h3 class="product-sec__tit">추천상품</h3>
+            <div class="recomend-prd">
+              <div class="ui-swiper recomend-prd__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="prd-card">
+                      <a href="javascript:void(0)">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <div class="prd-card__brand">라네즈</div>
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글) 라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                  </div><!-- //.swiper-slide -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div><!-- //.recomend-prd__swiper -->
+            </div>
+          </div>
+        </section>
         <!-- E: 추천상품 -->
         <!-- S: 그룹상품 -->
-        <section class="product-group"></section>
+        <hr class="divider pc-hide">
+        <section class="product-sec">
+          <div class="product-sec__inner">
+            <h3 class="product-sec__tit">이런 상품은 어떠세요?</h3>
+            <!-- S: 그룹상품 내 추천상품 -->
+            <div class="recomend-prd">
+              <div class="ui-swiper recomend-prd__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="prd-card">
+                      <a href="javascript:void(0)">
+                        <div class="prd-card__img">
+                          <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        </div>
+                        <div class="prd-card__info">
+                          <div class="prd-card__brand">라네즈</div>
+                          <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글) 라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                          <div class="prd-card__price">
+                            <div class="prd-card__price-percent">70%</div>
+                            <div class="prd-card__price-sale">$11.7</div>
+                            <div class="prd-card__price-original">$39</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div><!-- //.prd-card -->
+                  </div><!-- //.swiper-slide -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div><!-- //.recomend-prd__swiper -->
+            </div>
+            <!-- E: 그룹상품 내 추천상품 -->
+            <!-- S: 그룹상품 상품리스트 -->
+            <div class="product-sec__list prd-list">
+              <div class="prd-card">
+                <a href="javascript:void(0)">
+                  <div class="prd-card__img">
+                    <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                  </div>
+                  <div class="prd-card__info">
+                    <div class="prd-card__brand">라네즈</div>
+                    <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글) 라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
+                    <div class="prd-card__price">
+                      <div class="prd-card__price-percent">70%</div>
+                      <div class="prd-card__price-sale">$11.7
+                        <span class="prd-card__price-won">28,320원</span>
+                      </div>
+                      <div class="prd-card__price-original">$39</div>
+                    </div>
+                    <div class="prd-card__badges">
+                      <div class="badge">세일</div>
+                      <div class="badge">품절임박</div>
+                    </div>
+                  </div>
+                </a>
+              </div><!-- //.prd-card -->
+            </div><!-- //.prd-list -->
+          </div>
+        </section>
         <!-- E: 그룹상품 -->
       </div>
     </main>
@@ -806,7 +898,7 @@
                 <div class="hide">증가</div>
               </button>
             </div>
-            <button type="button" class="btn-primary">장바구니담기</button>
+            <button type="button" class="btn-primary btn_cart">장바구니담기</button>
           </div>
         </div><!-- //.modal__footer -->
       </div><!-- //.modal__content -->
@@ -816,30 +908,31 @@
   <script src="resources/js/swiper-bundle.min.js"></script>
   <script src="resources/js/common.js"></script>
   <script>
+    /* 브랜드 스와이퍼 */
     var ww = $(window).width();
     var brandSwiper = undefined;
     let resizeTimer;
     function initBrnadSwiper() {
       if (ww >= 1080 && brandSwiper == undefined) {
-        brandSwiper = new Swiper('.swiper-brand', {
+        brandSwiper = new Swiper('.brand__swiper', {
           slidesPerGroup: 5,
           slidesPerView: 5,
           spaceBetween: 24,
           loop: false,
           speed: 1500,
           breakpoints: {
-            1220: {
+            1400: {
               slidesPerView: 6,
               slidesPerGroup: 6
             },
           },
           pagination: {
-            el: ".swiper-brand .swiper-pagination",
+            el: ".brand__swiper .swiper-pagination",
             clickable: true,
           },
           navigation: {
-            nextEl: ".swiper-brand .swiper-button-next",
-            prevEl: ".swiper-brand .swiper-button-prev",
+            nextEl: ".brand__swiper .swiper-button-next",
+            prevEl: ".brand__swiper .swiper-button-prev",
           },
         });
       } else if (ww < 1080 && brandSwiper != undefined) {
@@ -855,24 +948,39 @@
         initBrnadSwiper();
       }, 200);
     });
-    var salePrdSwiper = new Swiper('.swiper-sale_prd', {
+    //  세일상품 스와이퍼
+    var salePrdSwiper = new Swiper('.sale-prd__swiper', {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: false,
       speed: 1500,
-      grabCursor: true,
       pagination: {
-        el: ".swiper-sale_prd .swiper-pagination",
+        el: ".sale-prd__swiper .swiper-pagination",
         clickable: true,
       },
     });
-    var setCardImgSwiper = new Swiper('.swiper-set_img ', {
+
+    // 세트구성 스와이퍼 
+    var setCardImgSwiper = new Swiper('.set-card__swiper ', {
       slidesPerView: 1,
       pagination: {
-        el: ".swiper-set_img  .swiper-pagination",
+        el: ".set-card__swiper  .swiper-pagination",
         clickable: true,
       },
     });
+
+    // 추천상품 스와이퍼
+    var recomendPrdSwiper = new Swiper('.recomend-prd__swiper', {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      loop: false,
+      speed: 1000,
+      navigation: {
+        nextEl: ".recomend-prd__swiper .swiper-button-next",
+        prevEl: ".recomend-prd__swiper .swiper-button-prev",
+      },
+    });
+
     //footer mobile dropdown
     $('.footer__logo-btn').on('click', function () {
       $('.footer__info__company').find('ul').slideToggle();

@@ -68,7 +68,7 @@
 
   <!-------- 세트상품 -------->
   <div class="set-card">
-    <div class="swiper-set_img set-card__img">
+    <div class="set-card__swiper set-card__img">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지"></div>
         <div class="swiper-slide"><img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지"></div>
@@ -116,14 +116,14 @@
   <script src="../resources/js/swiper-bundle.min.js"></script>
   <script src="../resources/js/common.js"></script>
   <script>
-    var setCardImgSwiper = new Swiper('.swiper-set_img ', {
+    var setCardImgSwiper = new Swiper('.set-card__swiper ', {
       slidesPerView: 1,
       grabCursor: true,
       thumbs: {
         swiper: setCardThumbSwiper,
       },
       pagination: {
-        el: ".swiper-set_img  .swiper-pagination",
+        el: ".set-card__swiper  .swiper-pagination",
         clickable: true,
       },
     });

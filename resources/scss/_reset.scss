@@ -236,11 +236,8 @@ legend {
     border: 0;
 }
 
-input[type="text"],
-textarea,
-input[type="button"],
-input[type="submit"],
-input[type="search"] {
+input,
+textarea{
     border-radius: 0;
     border: none;
     box-shadow: none;

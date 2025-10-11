@@ -1,8 +1,11 @@
 .brand-list {
 	display: flex;
-	gap: 24px 14px;
+	gap: 36px 24px;
 	flex-wrap: wrap;
 	justify-content: center;
+		@media screen and (max-width: 1079px) {
+		gap: 20px 16px;
+	}
 }
 .brand-card {
 	$this: &;
@@ -26,16 +29,20 @@
 			background: rgba(0, 0, 0, 0.3);
 		}
 		&::after {
+			z-index: 1;
 			content: "BRAND SHOP";
 			position: absolute;
 			inset-inline: 0;
 			bottom: 0;
-			padding: 6px 0;
-			font-size: 0.9rem;
+			padding: 12px 0;
+			font-size: 1.2rem;
 			font-weight: 500;
 			color: #fff;
 			text-align: center;
 			background-color: rgba(0, 0, 0, 0.4);
+			@media screen and (max-width: 1079px) {
+				display: none;
+			}
 		}
 		&-bg {
 			position: absolute;
@@ -64,9 +71,14 @@
 		transform: translate(-50%, -50%) scale(1.15);
 	}
 	&__tit {
-		margin-top: 8px;
-		font-size: 1.4rem;
+		margin-top: 12px;
+		font-size: 2rem;
 		font-weight: 700;
+		line-height: 1.42;
 		text-align: center;
+		@media screen and (max-width: 1079px) {
+			margin-top: 4px;
+			font-size: 1.4rem;
+		}
 	}
 }
