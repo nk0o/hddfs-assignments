@@ -2579,7 +2579,9 @@ body.no_scroll {
 }
 .btmsheet__handle {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 24px;
   cursor: pointer;
