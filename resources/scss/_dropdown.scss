@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SelectBox */
 .dropdown {
   display: inline-block;
@@ -56,7 +57,7 @@
         height: 4px;
     }
 
-    &::-webkit-scrollbar-button:start:decrement, &::-webkit-scrollbar-button:end:increment {
+    &::-webkit-scrollbar-button{
         display: none
     }
 

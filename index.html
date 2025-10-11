@@ -10,25 +10,21 @@
   <meta name="description" content="여행자 Only. 지금 현대면세점에서 앞선 감각과 다채로운 면세 쇼핑의 즐거움을 느껴보세요!">
   <meta name="keywords" content="현대면세점">
 
-  <!---------- og 태그 채우기 ---------->
   <meta property="og:type" content="website">
   <meta property="og:title" content="현대면세점">
   <meta property="og:description" content="여행자 Only. 지금 현대면세점에서 앞선 감각과 다채로운 면세 쇼핑의 즐거움을 느껴보세요!">
   <meta property="og:url" content="https://www.hddfs.com/">
-  <meta property="og:image" content="https://example.com/thumbnail.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="현대면세점">
   <meta name="twitter:description" content="여행자 Only. 지금 현대면세점에서 앞선 감각과 다채로운 면세 쇼핑의 즐거움을 느껴보세요!">
-  <meta name="twitter:image" content="https://example.com/thumbnail.jpg">
-  <!---------- og 태그 채우기 ---------->
 
   <title>현대면세점</title>
-  <script src="/resources/js/jquery-3.7.1.min.js"></script>
+  <script src="./resources/js/jquery-3.7.1.min.js"></script>
   <link rel="icon" type="image/png" href="favicon.ico">
 
-  <link rel="stylesheet" href="resources/css/swiper-bundle.css">
-  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="./resources/css/swiper-bundle.css">
+  <link rel="stylesheet" href="./resources/css/style.css">
 </head>
 
 <body>
@@ -49,21 +45,23 @@
           </ul>
         </div>
         <div class="header__main">
-          <button type="button" class="header__menu-btn">
-            <img src="/resources/images/icon/ico-drawer.png" alt="카테고리 메뉴 열기 버튼">
-          </button>
+          <div class="header__menu-btn">
+            <img src="./resources/images/icon/ico-drawer.png" alt="카테고리 메뉴 열기 버튼">
+          </div>
           <h1 class="header__logo">
-            <img class="header__logo-img" src="/resources/images/logo-header.gif" alt="현대백화점 면세점 로고">
+            <img class="header__logo-img" src="./resources/images/logo-header.gif" alt="현대백화점 면세점 로고">
           </h1>
           <div class="header__search">
-            <form action="" name="" class="header__search-box">
-              <legend>검색</legend>
-              <input id="gnbSearch" class="header__search-input" type="text" maxlength="50" name=""
-                placeholder="봄맞이🌸신상품 30% 할인 행사" />
-              <label for="gnbSearch"><span class="hide">검색어 입력</span></label>
-              <button type="submit" class="header__search-btn header__search-btn--hashtag"><span class="hide">해시태그
-                  검색</span></button>
-              <button type="submit" class="header__search-btn"><span class="hide">검색</span></button>
+            <form action="#" name="search" class="header__search-box">
+              <fieldset>
+                <legend>검색</legend>
+                <input id="gnbSearch" class="header__search-input" type="text" maxlength="50" name="search"
+                  placeholder="봄맞이🌸신상품 30% 할인 행사">
+                <label for="gnbSearch"><span class="hide">검색어 입력</span></label>
+                <button type="submit" class="header__search-btn header__search-btn--hashtag"><span class="hide">해시태그
+                    검색</span></button>
+                <button type="submit" class="header__search-btn"><span class="hide">검색</span></button>
+              </fieldset>
             </form>
           </div>
           <div class="header__btns">
@@ -75,14 +73,14 @@
       </div>
     </header>
     <header class="mo-header">
-      <button type="button" class="mo-header__btn mo-header__btn-back">
-        <img src="/resources/images/icon/ico-header-back.svg" alt="뒤로가기 버튼">
-      </button>
+      <div class="mo-header__btn mo-header__btn-back">
+        <img src="./resources/images/icon/ico-header-back.svg" alt="뒤로가기 버튼">
+      </div>
       <h2 class="mo-header__tit">사은행사</h2>
       <div class="mo-header__btns">
-        <button type="button" class="mo-header__btn mo-header__btn-search">
-          <img src="/resources/images/icon/ico-gnb-search.svg" alt="검색 버튼">
-        </button>
+        <div class="mo-header__btn mo-header__btn-search">
+          <img src="./resources/images/icon/ico-gnb-search.svg" alt="검색 버튼">
+        </div>
         <a href="javascript:void(0)" class="mo-header__btn mo-header__btn-cart">
           <span class="hide">장바구니</span>
         </a>
@@ -101,9 +99,9 @@
                 <div class="dropdown">
                   <div class="dropdown__value">
                     라네즈 외 7개 할인 기획전
-                    <button type="button">
-                      <img src="/resources/images/icon/ico-arrow-breadcrumb.png" alt="다른 행사 보기">
-                    </button>
+                    <div>
+                      <img src="./resources/images/icon/ico-arrow-breadcrumb.png" alt="다른 행사 보기">
+                    </div>
                   </div>
                   <div class="dropdown__list">
                     <ul>
@@ -133,7 +131,7 @@
               <div class="event-top__subtit">전 구매고객 대상 7개 브랜드 상품 할인!</div>
             </div>
             <div class="event-top__img">
-              <img src="/resources/images/event/img-laneige-banner.webp" alt>
+              <img src="./resources/images/event/img-laneige-banner.webp" alt>
             </div>
           </div>
         </section>
@@ -141,7 +139,7 @@
         <!-- S: 이벤트 탭메뉴 -->
         <div class="event-tab">
           <div class="tab-menu tab-menu--line clickTab">
-            <ul>
+            <ul role="tablist">
               <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>행사</button></li>
               <li class="tab-menu__list" data-tab="tab1-2" role="tab" tabindex="1"><button>추천상품</button></li>
               <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>전체상품</button></li>
@@ -152,6 +150,7 @@
         <!-- E: 이벤트 탭메뉴 -->
         <!-- S: 콘텐츠단 -->
         <section class="event-content toCont">
+          <h2 class="hide">이벤트 행사내용</h2>
           <!-- evnet1: 브랜드 그룹 -->
           <article class="event-content__box">
             <div class="badge" style="background-color: #5799D6;">Event <span>1</span></div>
@@ -163,8 +162,8 @@
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png"
+                        <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-orthomol.webp" alt>
+                        <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-orthomol.png"
                           alt="오쏘몰 로고">
                       </div>
                       <div class="brand-card__tit">오쏘몰</div>
@@ -173,8 +172,8 @@
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-laneige.jpg" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                        <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-laneige.jpg" alt>
+                        <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png"
                           alt="라네즈 로고">
                       </div>
                       <div class="brand-card__tit">라네즈</div>
@@ -183,8 +182,8 @@
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-centrum.jpg" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                        <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-centrum.jpg" alt>
+                        <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png"
                           alt="라네즈 로고">
                       </div>
                       <div class="brand-card__tit">센트룸</div>
@@ -193,8 +192,8 @@
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-onnuri.jpg" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                        <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-onnuri.jpg" alt>
+                        <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png"
                           alt="라네즈 로고">
                       </div>
                       <div class="brand-card__tit">온누리스토어</div>
@@ -203,8 +202,8 @@
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                        <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-hermes.jpg" alt>
+                        <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png"
                           alt="라네즈 로고">
                       </div>
                       <div class="brand-card__tit">헤어메스</div>
@@ -213,8 +212,8 @@
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-lacto.jpg" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png"
+                        <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-lacto.jpg" alt>
+                        <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png"
                           alt="라네즈 로고">
                       </div>
                       <div class="brand-card__tit">종근당건강</div>
@@ -223,8 +222,8 @@
                   <div class="swiper-slide brand-card">
                     <a href="javascript:void(0)">
                       <div class="brand-card__img">
-                        <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
-                        <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png"
+                        <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-orthomol.webp" alt>
+                        <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-orthomol.png"
                           alt="오쏘몰 로고">
                       </div>
                       <div class="brand-card__tit">오쏘몰</div>
@@ -249,8 +248,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글) 라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -265,8 +264,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -281,8 +280,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-03.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-03.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -297,8 +296,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-04.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-04.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -313,8 +312,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-05.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-05.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -329,8 +328,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-06.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-06.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -347,8 +346,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -363,8 +362,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -379,8 +378,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-03.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-03.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -395,8 +394,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-04.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-04.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -411,8 +410,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-05.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-05.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -427,8 +426,8 @@
                     <div class="prd-card">
                       <a href="javascript:void(0)">
                         <div class="prd-card__img">
-                          <img src="../../resources/images/product/img-prd-06.webp" alt="상품명_이미지">
-                          <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                          <img src="./resources/images/product/img-prd-06.webp" alt="상품명_이미지">
+                          <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                         </div>
                         <div class="prd-card__info">
                           <strong class="prd-card__tit">라네즈 네오 에센셜 블러링 피니시 파우더(싱글)</strong>
@@ -455,9 +454,9 @@
               <div class="set-card">
                 <div class="ui-swiper set-card__swiper set-card__img">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
+                    <div class="swiper-slide"><img src="./resources/images/product/img-prd-07.webp" alt="상품명_이미지">
                     </div>
-                    <div class="swiper-slide"><img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                    <div class="swiper-slide"><img src="./resources/images/product/img-prd-01.webp" alt="상품명_이미지">
                     </div>
                   </div>
                   <div class="swiper-pagination swiper-pagination--dot"></div>
@@ -467,9 +466,9 @@
                     <div class="set-card__txt">상품구성</div>
                     <div class="set-card__thumbnail">
                       <button type="button" data-modal="modal01" class="btn--modal-open"><img
-                          src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지"></button>
+                          src="./resources/images/product/img-prd-07.webp" alt="상품명_이미지"></button>
                       <button type="button" data-modal="modal01" class="btn--modal-open"><img
-                          src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지"></button>
+                          src="./resources/images/product/img-prd-01.webp" alt="상품명_이미지"></button>
                     </div>
                   </div>
                   <div class="set-card__price">
@@ -499,8 +498,8 @@
               <div class="brand-card">
                 <a href="javascript:void(0)">
                   <div class="brand-card__img">
-                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-laneige.jpg" alt>
-                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                    <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-laneige.jpg" alt>
+                    <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
                   </div>
                   <div class="brand-card__tit">라네즈</div>
                 </a>
@@ -508,8 +507,8 @@
               <div class="brand-card">
                 <a href="javascript:void(0)">
                   <div class="brand-card__img">
-                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
-                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
+                    <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-orthomol.webp" alt>
+                    <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
                   </div>
                   <div class="brand-card__tit">오쏘몰</div>
                 </a>
@@ -517,8 +516,8 @@
               <div class="brand-card">
                 <a href="javascript:void(0)">
                   <div class="brand-card__img">
-                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-centrum.jpg" alt>
-                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                    <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-centrum.jpg" alt>
+                    <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
                   </div>
                   <div class="brand-card__tit">센트룸</div>
                 </a>
@@ -526,8 +525,8 @@
               <div class="brand-card">
                 <a href="javascript:void(0)">
                   <div class="brand-card__img">
-                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-onnuri.jpg" alt>
-                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                    <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-onnuri.jpg" alt>
+                    <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
                   </div>
                   <div class="brand-card__tit">온누리스토어</div>
                 </a>
@@ -535,8 +534,8 @@
               <div class="brand-card">
                 <a href="javascript:void(0)">
                   <div class="brand-card__img">
-                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
-                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                    <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-hermes.jpg" alt>
+                    <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
                   </div>
                   <div class="brand-card__tit">헤어메스</div>
                 </a>
@@ -544,8 +543,8 @@
               <div class="brand-card">
                 <a href="javascript:void(0)">
                   <div class="brand-card__img">
-                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-hermes.jpg" alt>
-                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                    <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-hermes.jpg" alt>
+                    <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
                   </div>
                   <div class="brand-card__tit">헤어메스</div>
                 </a>
@@ -553,8 +552,8 @@
               <div class="brand-card">
                 <a href="javascript:void(0)">
                   <div class="brand-card__img">
-                    <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-lacto.jpg" alt>
-                    <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
+                    <img class="brand-card__img-bg" src="./resources/images/brand/img-brand-lacto.jpg" alt>
+                    <img class="brand-card__img-logo" src="./resources/images/brand/img-logo-laneige.png" alt="라네즈 로고">
                   </div>
                   <div class="brand-card__tit">종근당건강</div>
                 </a>
@@ -588,8 +587,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -607,8 +606,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -626,8 +625,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-03.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-03.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -645,8 +644,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-04.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-04.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -664,8 +663,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-05.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-05.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -683,8 +682,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-06.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-06.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -710,7 +709,7 @@
         <section class="product-sec product-sec--group toCont">
           <div class="product-sec__inner">
             <div class="tab-menu tab-menu--round">
-              <ul>
+              <ul role="tablist">
                 <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>아우구스티누스 바더</button>
                 </li>
                 <li class="tab-menu__list" data-tab="tab1-2" role="tab" tabindex="1"><button>아우구스티누스 바더</button></li>
@@ -727,8 +726,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-07.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -746,8 +745,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-08.jpg" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-08.jpg" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -765,8 +764,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-09.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-09.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -784,8 +783,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -803,8 +802,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -822,8 +821,8 @@
                   <div class="prd-card">
                     <a href="javascript:void(0)">
                       <div class="prd-card__img">
-                        <img src="../../resources/images/product/img-prd-03.webp" alt="상품명_이미지">
-                        <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                        <img src="./resources/images/product/img-prd-03.webp" alt="상품명_이미지">
+                        <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                       </div>
                       <div class="prd-card__info">
                         <div class="prd-card__brand">라네즈</div>
@@ -846,13 +845,13 @@
           <!-- S: 그룹상품 상품리스트 -->
           <div class="product-sec__inner">
             <div class="prd-filter">
-              <button type="button" class="prd-filter__btn btn-primary mo-hide">FILTER&nbsp;&nbsp;━</button>
+              <div class="prd-filter__btn btn-primary mo-hide">FILTER&nbsp;&nbsp;━</div>
               <div class="prd-filter__count"><span class="pc-hide">총</span> 41건</div>
               <div class="prd-filter__toggle">
-                <p class="toggle-btn__txt"><img src="/resources/images/icon/ico-info.svg" class="pc-hide" alt>품절<span
+                <p class="toggle-btn__txt"><img src="./resources/images/icon/ico-info.svg" class="pc-hide" alt>품절<span
                     class="mo-hide">제외</span></p>
                 <div class="toggle-btn">
-                  <input id="toggleBtn" class="toggle-btn__input" type="checkbox" checked />
+                  <input id="toggleBtn" class="toggle-btn__input" type="checkbox" checked>
                   <label for="toggleBtn" class="toggle-btn__label"></label>
                 </div>
               </div>
@@ -872,15 +871,15 @@
                   </div>
                 </div><!-- //.dropdown -->
               </div><!-- //.prd-filter__order -->
-              <button class="prd-filter__icon pc-hide"><img src="/resources/images/icon/ico-filter.svg"
+              <button class="prd-filter__icon pc-hide"><img src="./resources/images/icon/ico-filter.svg"
                   alt="상품 필터 버튼"></button>
             </div><!-- //.prd-filter -->
             <div class="product-sec__list prd-list cart-action">
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-05.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-05.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -903,8 +902,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-06.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-06.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -927,8 +926,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-07.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -951,8 +950,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-08.jpg" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-08.jpg" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -975,8 +974,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-09.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-09.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -999,8 +998,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -1023,8 +1022,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-03.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-03.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -1047,8 +1046,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-02.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-02.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -1071,8 +1070,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-05.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-05.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -1095,8 +1094,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-06.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-06.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -1119,8 +1118,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-07.webp" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-07.webp" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -1143,8 +1142,8 @@
               <div class="prd-card">
                 <a href="javascript:void(0)">
                   <div class="prd-card__img">
-                    <img src="../../resources/images/product/img-prd-08.jpg" alt="상품명_이미지">
-                    <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
+                    <img src="./resources/images/product/img-prd-08.jpg" alt="상품명_이미지">
+                    <div class="prd-card__cart"><span class="hide">장바구니 담기</span></div>
                   </div>
                   <div class="prd-card__info">
                     <div class="prd-card__brand">라네즈</div>
@@ -1237,9 +1236,9 @@
         <div class="footer__inner">
           <div class="footer__info__company">
             <div class="footer__logo">
-              <a href="javascript:void(0)"><img src="/resources/images/logo-footer.png" alt="HYUNDAI - DUTY FREE"></a>
+              <a href="javascript:void(0)"><img src="./resources/images/logo-footer.png" alt="HYUNDAI - DUTY FREE"></a>
               <strong>㈜현대디에프</strong>
-              <button type="button" class="footer__logo-btn"></button>
+              <div class="footer__logo-btn"></div>
             </div>
             <ul>
               <li>
@@ -1336,9 +1335,9 @@
       <!-- modal__container -->
       <div class="modal__overlay"></div>
       <div class="modal__content">
-        <button type="button" class="modal__btn-close">
-          <img src="../resources/images/icon/ico_close.svg" alt="모달 닫기">
-        </button>
+        <div class="modal__btn-close">
+          <img src="./resources/images/icon/ico_close.svg" alt="모달 닫기">
+        </div>
         <div class="modal__header">
           <h1 class="modal__tit">세트 구성 보기</h1>
         </div><!-- //.modal__header -->
@@ -1351,7 +1350,7 @@
             <div class="set-prd">
               <div class="set-prd__item">
                 <div class="set-prd__img">
-                  <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
+                  <img src="./resources/images/product/img-prd-09.webp" alt="상품명 이미지">
                 </div>
                 <div class="set-prd__info">
                   <strong class="set-prd__tit">구찌 뷰티</strong>
@@ -1360,7 +1359,7 @@
               </div><!-- //.set-prd__item -->
               <div class="set-prd__item">
                 <div class="set-prd__img">
-                  <img src="../resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
+                  <img src="./resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
                 </div>
                 <div class="set-prd__info">
                   <strong class="set-prd__tit">구찌 뷰티</strong>
@@ -1369,7 +1368,7 @@
               </div><!-- //.set-prd__item -->
               <div class="set-prd__item">
                 <div class="set-prd__img">
-                  <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
+                  <img src="./resources/images/product/img-prd-09.webp" alt="상품명 이미지">
                 </div>
                 <div class="set-prd__info">
                   <strong class="set-prd__tit">구찌 뷰티</strong>
@@ -1378,7 +1377,7 @@
               </div><!-- //.set-prd__item -->
               <div class="set-prd__item">
                 <div class="set-prd__img">
-                  <img src="../resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
+                  <img src="./resources/images/product/img-prd-08.jpg" alt="상품명 이미지">
                 </div>
                 <div class="set-prd__info">
                   <strong class="set-prd__tit">구찌 뷰티</strong>
@@ -1387,7 +1386,7 @@
               </div><!-- //.set-prd__item -->
               <div class="set-prd__item">
                 <div class="set-prd__img">
-                  <img src="../resources/images/product/img-prd-09.webp" alt="상품명 이미지">
+                  <img src="./resources/images/product/img-prd-09.webp" alt="상품명 이미지">
                 </div>
                 <div class="set-prd__info">
                   <strong class="set-prd__tit">구찌 뷰티</strong>
@@ -1400,15 +1399,15 @@
         <div class="modal__footer">
           <div class="btn-group">
             <div class="spinner">
-              <button type="button" class="spinner__btn spinner__btn--down" disabled>
-                <div class="hide">감소</div>
+              <button type="button" class="spinner__btn spinner__btn--down">
+                <span class="hide">감소</span>
               </button>
               <input id="spinner-input" type="text" class="spinner__input" value="1" disabled>
               <button type="button" class="spinner__btn spinner__btn--up">
-                <div class="hide">증가</div>
+                <span class="hide">증가</span>
               </button>
             </div>
-            <button type="button" class="btn-primary btn_cart">장바구니담기</button>
+            <div class="btn-primary btn_cart">장바구니담기</div>
           </div>
         </div><!-- //.modal__footer -->
       </div><!-- //.modal__content -->
@@ -1420,22 +1419,21 @@
       <div class="btmsheet__back"></div>
       <div class="btmsheet__inner">
         <div class="btmsheet__head">
-          <button type="button" class="btmsheet__handle"></button>
+          <div class="btmsheet__handle"></div>
         </div><!-- //.btmsheet_head -->
         <div class="btmsheet__cont">
           <div class="btmsheet__search">
-            <form action="" name="" class="search-box">
-              <button type="button" class="search-box__close"><span class="hide">기획전목록 닫기</span></button>
-              <legend>검색</legend>
-              <input id="btmsheetSearch" class="search-box__input" type="text" maxlength="50" name=""
-                placeholder="브랜드명으로 검색해보세요" />
+            <form action="#" name="btmSearch" class="search-box">
+              <div class="search-box__close"><span class="hide">기획전목록 닫기</span></div>
+              <input id="btmsheetSearch" class="search-box__input" type="text" maxlength="50" name="btmSearch"
+                placeholder="브랜드명으로 검색해보세요">
               <label for="gnbSearch"><span class="hide">검색어 입력</span></label>
               <button type="submit" class="search-box__btn"><span class="hide">검색</span></button>
             </form>
           </div>
           <div class="btmsheet__tab">
             <div class="tab-menu tab-menu--line">
-              <ul>
+              <ul role="tablist">
                 <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>전체</button></li>
                 <li class="tab-menu__list" data-tab="tab1-2" role="tab" tabindex="1"><button>스킨케어</button></li>
                 <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>메이크업</button></li>
@@ -1447,27 +1445,27 @@
           <ul class="event-banner__list">
             <li class="event-banner__item">
               <a href="javascript:void(0)">
-                <img src="/resources/images/event/img-banner-1.png" alt="라네즈 외 7개 브랜드 햇살 가림 상품 기획전">
+                <img src="./resources/images/event/img-banner-1.png" alt="라네즈 외 7개 브랜드 햇살 가림 상품 기획전">
               </a>
             </li>
             <li class="event-banner__item">
               <a href="javascript:void(0)">
-                <img src="/resources/images/event/img-banner-2.png" alt="차앤박 구매사은행사">
+                <img src="./resources/images/event/img-banner-2.png" alt="차앤박 구매사은행사">
               </a>
             </li>
             <li class="event-banner__item">
               <a href="javascript:void(0)">
-                <img src="/resources/images/event/img-banner-3.png" alt="수려한 구매사은행사">
+                <img src="./resources/images/event/img-banner-3.png" alt="수려한 구매사은행사">
               </a>
             </li>
             <li class="event-banner__item">
               <a href="javascript:void(0)">
-                <img src="/resources/images/event/img-banner-4.png" alt="이니스프리 기획전">
+                <img src="./resources/images/event/img-banner-4.png" alt="이니스프리 기획전">
               </a>
             </li>
             <li class="event-banner__item">
               <a href="javascript:void(0)">
-                <img src="/resources/images/event/img-banner-5.png" alt="볼앤체인 포토리뷰 이벤트">
+                <img src="./resources/images/event/img-banner-5.png" alt="볼앤체인 포토리뷰 이벤트">
               </a>
             </li>
           </ul>

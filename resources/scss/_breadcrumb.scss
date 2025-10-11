@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Breadcrumb */
 .breadcrumb {
   display: flex;
@@ -60,8 +61,8 @@
           height: 4px;
         }
 
-        &::-webkit-scrollbar-button:start:decrement,
-        &::-webkit-scrollbar-button:end:increment {
+        &::-webkit-scrollbar-button,
+        &::-webkit-scrollbar-button {
           display: none;
         }
 

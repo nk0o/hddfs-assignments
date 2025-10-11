@@ -763,12 +763,12 @@ body.no_scroll {
   }
 }
 .footer__menu {
-  overflow-x: auto;
   padding-block: 15px 14px;
   background-color: #282c34;
 }
 @media screen and (max-width: 1079px) {
   .footer__menu {
+    overflow-x: auto;
     background-color: transparent;
   }
 }
@@ -970,6 +970,7 @@ body.no_scroll {
   line-height: 1.34;
 }
 .footer__logo-btn {
+  cursor: pointer;
   width: 16px;
   height: 16px;
   margin-left: 8px;
@@ -1397,7 +1398,7 @@ body.no_scroll {
   width: 4px;
   height: 4px;
 }
-.breadcrumb .dropdown__list ul::-webkit-scrollbar-button:start:decrement, .breadcrumb .dropdown__list ul::-webkit-scrollbar-button:end:increment {
+.breadcrumb .dropdown__list ul::-webkit-scrollbar-button, .breadcrumb .dropdown__list ul::-webkit-scrollbar-button {
   display: none;
 }
 .breadcrumb .dropdown__list ul::-webkit-scrollbar-track {
@@ -1654,7 +1655,7 @@ body.no_scroll {
   width: 8px;
   height: 4px;
 }
-.dropdown__list::-webkit-scrollbar-button:start:decrement, .dropdown__list::-webkit-scrollbar-button:end:increment {
+.dropdown__list::-webkit-scrollbar-button {
   display: none;
 }
 .dropdown__list::-webkit-scrollbar-track {
@@ -2970,7 +2971,7 @@ body.no_scroll {
 }
 @media screen and (max-width: 1079px) {
   .event-bottom .notice {
-    padding-top: 20x;
+    padding-top: 20px;
   }
 }
 

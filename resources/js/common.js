@@ -1,4 +1,4 @@
-/****** Select Box ******/
+/****** Dropdown ******/
 $(document).on('click', '.dropdown__value', function (e) {
   e.preventDefault();
   const t = $(this);
@@ -48,7 +48,6 @@ function dropDownClose() {
   $('.dropdown').removeClass('on');
 };
 
-//Change Select Box Value
 function SelectBoxChange(selectItem) {
   if ($(selectItem).find('ul').length <= 0) {
     var $cloneEle = $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').children();
@@ -56,7 +55,7 @@ function SelectBoxChange(selectItem) {
     clearInput(selectItem);
     $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').html(selectText);
     $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').append($cloneEle);
-    $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').css('color', '#222222');
+    $(selectItem).parents('.dropdown').find('.dropdown__value').children('span').css('color', 'inherit');
   }
 };
 
@@ -67,7 +66,6 @@ function clearInput(obj) {
 
 
 /**** Tab UI ****/
-
 $(document).on('click', '.tab-menu .tab-menu__list', function () { tabMenu(this) });
 
 function LineTabMenuInit() {
@@ -106,39 +104,7 @@ function tabMenu(el) {
       var leftss = $(tab).scrollLeft();
     }
   }
-  
-  if (tab.hasClass('tab-menu--center')) {
-    moveCenterTab(el);
-  }
 }
-//Tab 가운데
-function moveCenterTab(el){
-  let liWid = 0,
-    boxWid = $('.tab-menu--center').outerWidth(true),
-    boxHalf = $('.tab-menu--center').outerWidth(true) / 2,
-    leftPos = 0,
-    // pd = $(el).parent('ul').css('padding-left') * 2,
-    selectPos,
-    pos;
-  $(el).parents('.tab-menu--center').find('.tabmenu__list').each(function() {
-    liWid += $(this).outerWidth(true);
-  });
-  for (let i=0; i< $(el).index(); i++) {
-    leftPos += $(el).parents('.tab-menu--center').find('.tabmenu__list').eq(i).outerWidth(true);
-  }
-  selectPos = leftPos + $(el).outerWidth(true)/2;
-  if (selectPos < boxHalf) {
-  pos = 0;
-  } else if (liWid - selectPos < boxHalf) {
-  pos = liWid - boxWid;
-  }  
-  else {
-  pos = selectPos - boxHalf ;
-  }
-
-  $(el).parents('.tab-menu--center').find('>ul').animate({scrollLeft:pos});
-}
-
 $(window).on('load resize', function () {
   LineTabMenuInit()
 });
