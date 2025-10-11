@@ -89,7 +89,21 @@
   }
   &__cont{
     overflow: auto;
-    max-height: 80dvh;
+    max-height: 50dvh;
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 10%;
+      width: 4px;
+      border-radius: 10px;
+      background-color: #ccd1d7;
+      cursor: pointer;
+    }
   }
   &__search{
     margin-top: 12px;
@@ -103,6 +117,20 @@
         flex-wrap: nowrap;        
         overflow-x: auto;
         padding-inline: 24px;
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          height: 10%;
+          width: 4px;
+          border-radius: 10px;
+          background-color: #ccd1d7;
+          cursor: pointer;
+        }
       }
       .tab-menu__list{
         flex: none;

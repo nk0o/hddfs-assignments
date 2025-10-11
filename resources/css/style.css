@@ -2626,7 +2626,21 @@ body.no_scroll {
 }
 .btmsheet__cont {
   overflow: auto;
-  max-height: 80dvh;
+  max-height: 50dvh;
+}
+.btmsheet__cont::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.btmsheet__cont::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.btmsheet__cont::-webkit-scrollbar-thumb {
+  height: 10%;
+  width: 4px;
+  border-radius: 10px;
+  background-color: #ccd1d7;
+  cursor: pointer;
 }
 .btmsheet__search {
   margin-top: 12px;
@@ -2642,6 +2656,20 @@ body.no_scroll {
   flex-wrap: nowrap;
   overflow-x: auto;
   padding-inline: 24px;
+}
+.btmsheet__tab .tab-menu ul::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.btmsheet__tab .tab-menu ul::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.btmsheet__tab .tab-menu ul::-webkit-scrollbar-thumb {
+  height: 10%;
+  width: 4px;
+  border-radius: 10px;
+  background-color: #ccd1d7;
+  cursor: pointer;
 }
 .btmsheet__tab .tab-menu .tab-menu__list {
   flex: none;

@@ -59,7 +59,7 @@
         <div class="prd-card">
           <a href="javascript:void(0)">
             <div class="prd-card__img">
-              <img src="../../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
+              <img src="../resources/images/product/img-prd-01.webp" alt="상품명_이미지">
               <button type="button" class="prd-card__cart"><span class="hide">장바구니 담기</span></button>
             </div>
             <div class="prd-card__info">
@@ -90,8 +90,8 @@
       <div class="swiper-slide brand-card">
         <a href="javascript:void(0)">
           <div class="brand-card__img">
-            <img class="brand-card__img-bg" src="/resources/images/brand/img-brand-orthomol.webp" alt>
-            <img class="brand-card__img-logo" src="/resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
+            <img class="brand-card__img-bg" src="../resources/images/brand/img-brand-orthomol.webp" alt>
+            <img class="brand-card__img-logo" src="../resources/images/brand/img-logo-orthomol.png" alt="오쏘몰 로고">
           </div>
           <div class="brand-card__tit">오쏘몰</div>
         </a>
@@ -103,7 +103,7 @@
     <h2 class="guideline__tit">Toggle Button</h2>
     <div class="guideline__cont">
       <div class="prd-filter__toggle">
-        <p class="toggle-btn__txt"><img src="/resources/images/icon/ico-info.svg" class="pc-hide" alt>품절<span
+        <p class="toggle-btn__txt"><img src="../resources/images/icon/ico-info.svg" class="pc-hide" alt>품절<span
             class="mo-hide">제외</span></p>
         <div class="toggle-btn">
           <input id="toggleBtn" class="toggle-btn__input" type="checkbox" checked />
@@ -293,55 +293,53 @@
         <div class="btmsheet__back"></div>
         <div class="btmsheet__inner">
           <div class="btmsheet__head">
-            <button type="button" class="btmsheet__handle"></button>
-          </div><!-- //.btmsheet_head -->
-          <div class="btmsheet__cont">
+            <div class="btmsheet__handle"></div>
             <div class="btmsheet__search">
-              <form action="" name="" class="search-box">
-                <button type="button" class="search-box__close"><span class="hide">기획전목록 닫기</span></button>
-                <legend>검색</legend>
-                <input id="btmsheetSearch" class="search-box__input" type="text" maxlength="50" name=""
-                  placeholder="브랜드명으로 검색해보세요" />
+              <form action="#" name="btmSearch" class="search-box">
+                <div class="search-box__close"><span class="hide">기획전목록 닫기</span></div>
+                <input id="btmsheetSearch" class="search-box__input" type="text" maxlength="50" name="btmSearch"
+                  placeholder="브랜드명으로 검색해보세요">
                 <label for="gnbSearch"><span class="hide">검색어 입력</span></label>
                 <button type="submit" class="search-box__btn"><span class="hide">검색</span></button>
               </form>
-            </div>
+            </div><!-- //.btmsheet__search -->
             <div class="btmsheet__tab">
               <div class="tab-menu tab-menu--line">
-                <ul>
-                  <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>전체</button>
-                  </li>
+                <ul role="tablist">
+                  <li class="current tab-menu__list" data-tab="tab1-1" role="tab" tabindex="0"><button>전체</button></li>
                   <li class="tab-menu__list" data-tab="tab1-2" role="tab" tabindex="1"><button>스킨케어</button></li>
                   <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>메이크업</button></li>
                   <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>향수/헤어/바디</button></li>
                   <li class="tab-menu__list" data-tab="tab1-3" role="tab" tabindex="2"><button>가방/지갑</button></li>
                 </ul>
               </div>
-            </div>
+            </div><!-- //.btmsheet__tab -->
+          </div><!-- //.btmsheet_head -->
+          <div class="btmsheet__cont">
             <ul class="event-banner__list">
               <li class="event-banner__item">
                 <a href="javascript:void(0)">
-                  <img src="/resources/images/event/img-banner-1.png" alt="라네즈 외 7개 브랜드 햇살 가림 상품 기획전">
+                  <img src="../resources/images/event/img-banner-1.png" alt="라네즈 외 7개 브랜드 햇살 가림 상품 기획전">
                 </a>
               </li>
               <li class="event-banner__item">
                 <a href="javascript:void(0)">
-                  <img src="/resources/images/event/img-banner-2.png" alt="차앤박 구매사은행사">
+                  <img src="../resources/images/event/img-banner-2.png" alt="차앤박 구매사은행사">
                 </a>
               </li>
               <li class="event-banner__item">
                 <a href="javascript:void(0)">
-                  <img src="/resources/images/event/img-banner-3.png" alt="수려한 구매사은행사">
+                  <img src="../resources/images/event/img-banner-3.png" alt="수려한 구매사은행사">
                 </a>
               </li>
               <li class="event-banner__item">
                 <a href="javascript:void(0)">
-                  <img src="/resources/images/event/img-banner-4.png" alt="이니스프리 기획전">
+                  <img src="../resources/images/event/img-banner-4.png" alt="이니스프리 기획전">
                 </a>
               </li>
               <li class="event-banner__item">
                 <a href="javascript:void(0)">
-                  <img src="/resources/images/event/img-banner-5.png" alt="볼앤체인 포토리뷰 이벤트">
+                  <img src="../resources/images/event/img-banner-5.png" alt="볼앤체인 포토리뷰 이벤트">
                 </a>
               </li>
             </ul>
